@@ -1,0 +1,20 @@
+.skills-section {
+
+}
+
+.skills-section__title {
+    margin-bottom: torem(25);
+
+    @include adaptFontSize(39, 43);
+}
+
+.skills-section__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.skills-section__skill-card {
+    flex: 1 1 500px;
+}

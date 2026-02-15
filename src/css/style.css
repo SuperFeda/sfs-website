@@ -1,0 +1,603 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atziluth";
+  src: url("/fonts/atziluth-script/Atziluth-Script.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --max-site-container-width: 1600px;
+  --min-site-containte-width: 300px;
+  --jetbrains-mono: "JetBrains Mono", sans-serif;
+  --atziluth-script: "Atziluth", sans-serif;
+  --font-color: #ffffff;
+  --bg-color: #050505;
+  --skylight-blue-rgb: 54, 54, 225;
+  --telegram-color: 0, 174, 237;
+}
+@media (prefers-contrast: more) {
+  :root {
+    --font-color: yellow;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+p {
+  margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: 24px;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.2;
+}
+
+a:where([class]) {
+  display: inline-flex;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.no-display {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-mobile {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+
+.container {
+  max-width: var(--max-site-container-width);
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  margin: auto;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+#box header, #box main, #box footer {
+  z-index: 20;
+}
+
+.gridPattern {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background-size: 25px 25px;
+  background-image: linear-gradient(to right, #1e1e1e 1px, transparent 1px), linear-gradient(to bottom, #1e1e1e 1px, transparent 1px);
+}
+.gridPattern:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(rgba(255, 0, 0, 0.2), var(--bg-color) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.radialOverlay {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, transparent 15%, var(--bg-color));
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 15%, var(--bg-color));
+  background-color: var(--bg-color);
+}
+
+.jetbrains-mono-font {
+  font-family: var(--jetbrains-mono);
+}
+
+.atziluth-font {
+  font-family: var(--atziluth-script);
+}
+
+.skylight-blue-text {
+  color: rgb(var(--skylight-blue-rgb));
+}
+
+.italic-style {
+  font-style: italic;
+}
+
+body {
+  line-height: 1.4;
+  height: 100%;
+  scroll-behavior: smooth;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  font-family: var(--jetbrains-mono);
+  font-weight: 300;
+}
+::selection {
+  background-color: rgba(var(--skylight-blue-rgb), 0.5);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+main {
+  flex: 1 1 auto;
+  padding: 15px 2.5%;
+  z-index: 2;
+}
+
+section:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+button {
+  color: var(--font-color);
+}
+@media (prefers-contrast: less) or (prefers-contrast: more) {
+  button {
+    border-radius: 0;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+.title--with-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.title--with-icon svg, .title--with-icon span {
+  display: inline-flex;
+}
+.title--600 {
+  font-weight: 600;
+}
+.title--red-icon svg {
+  box-sizing: content-box;
+  padding: 0.375rem;
+  color: rgb(221, 57, 57);
+  background-color: rgba(221, 57, 57, 0.15);
+  border-radius: 0.5rem;
+}
+.title--purple-icon svg {
+  box-sizing: content-box;
+  padding: 0.375rem;
+  color: rgb(120, 40, 255);
+  background-color: rgba(120, 40, 255, 0.15);
+  border-radius: 0.5rem;
+}
+.title--skylight-blue-icon svg {
+  box-sizing: content-box;
+  padding: 0.375rem;
+  color: rgb(var(--skylight-blue-rgb));
+  background-color: rgba(var(--skylight-blue-rgb), 0.15);
+  border-radius: 0.5rem;
+}
+.title--blue-icon svg {
+  box-sizing: content-box;
+  padding: 0.375rem;
+  color: rgb(0, 125, 254);
+  background-color: rgba(0, 125, 254, 0.15);
+  border-radius: 0.5rem;
+}
+
+.skill {
+  border: 1px solid rgba(85, 85, 85, 0.5);
+  background-color: rgba(85, 85, 85, 0.25);
+  border-radius: 10px;
+  transition: scale 0.2s;
+  cursor: default;
+}
+@media (hover: hover) {
+  .skill:hover {
+    scale: 1.02;
+  }
+}
+.skill--with-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.skill--with-icon svg, .skill--with-icon span {
+  display: inline-flex;
+}
+.skill--python {
+  background-color: rgba(52, 117, 167, 0.25);
+  border-color: rgba(52, 117, 167, 0.5);
+}
+.skill--fastapi {
+  background-color: rgba(5, 152, 138, 0.25);
+  border-color: rgba(5, 152, 138, 0.5);
+}
+.skill--pydantic {
+  background-color: rgba(232, 53, 111, 0.25);
+  border-color: rgba(232, 53, 111, 0.5);
+}
+.skill--bash {
+  background-color: rgba(60, 69, 73, 0.25);
+  border-color: rgba(60, 69, 73, 0.5);
+}
+.skill--docker {
+  background-color: rgba(29, 99, 237, 0.25);
+  border-color: rgba(29, 99, 237, 0.5);
+}
+.skill--git {
+  background-color: rgba(240, 80, 48, 0.25);
+  border-color: rgba(240, 80, 48, 0.5);
+}
+.skill--javascript {
+  background-color: rgba(247, 224, 37, 0.25);
+  border-color: rgba(247, 224, 37, 0.5);
+}
+.skill--typescript {
+  background-color: rgba(55, 124, 200, 0.25);
+  border-color: rgba(55, 124, 200, 0.5);
+}
+.skill--reactjs {
+  background-color: rgba(88, 196, 220, 0.25);
+  border-color: rgba(88, 196, 220, 0.5);
+}
+.skill--nextjs {
+  background-color: rgba(25, 25, 25, 0.25);
+  border-color: rgba(25, 25, 25, 0.5);
+}
+.skill--html {
+  background-color: rgba(229, 83, 45, 0.25);
+  border-color: rgba(229, 83, 45, 0.5);
+}
+.skill--css {
+  background-color: rgba(107, 57, 156, 0.25);
+  border-color: rgba(107, 57, 156, 0.5);
+}
+.skill--scss {
+  background-color: rgba(207, 108, 156, 0.25);
+  border-color: rgba(207, 108, 156, 0.5);
+}
+
+.skill-card__title {
+  margin-bottom: 1.125rem;
+  font-size: clamp(1.25rem, 1.1923076923rem + 0.3076923077vw, 1.5rem);
+}
+
+.skill-card__technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-card__skill {
+  padding: 5px 15px;
+}
+
+.button {
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  transition: background-color 0.2s;
+}
+@media (hover: hover) {
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
+  }
+}
+.button--with-svg {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.about-section {
+  text-align: center;
+  margin-inline: 5%;
+  padding-block: 11.25rem;
+}
+
+.about-section__title {
+  margin-bottom: 3.5rem;
+  line-height: 1;
+  font-size: clamp(2.5rem, 2.2115384615rem + 1.5384615385vw, 3.75rem);
+}
+
+.about-section__description {
+  font-size: clamp(1.125rem, 1.0673076923rem + 0.3076923077vw, 1.375rem);
+}
+
+@media (hover: hover) {
+  .about-section__span:hover {
+    text-decoration: underline;
+  }
+}
+
+.about-section__button {
+  padding: 0.3888888889em 0.8888888889em;
+  font-size: clamp(0.875rem, 0.8605769231rem + 0.0769230769vw, 0.9375rem);
+}
+
+.about-section__list {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.services-section__title {
+  margin-bottom: 1.5625rem;
+  font-size: clamp(2.4375rem, 2.3798076923rem + 0.3076923077vw, 2.6875rem);
+}
+
+.skills-section__title {
+  margin-bottom: 1.5625rem;
+  font-size: clamp(2.4375rem, 2.3798076923rem + 0.3076923077vw, 2.6875rem);
+}
+
+.skills-section__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.skills-section__skill-card {
+  flex: 1 1 500px;
+}
+
+/*# sourceMappingURL=style.css.map */

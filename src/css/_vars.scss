@@ -1,0 +1,19 @@
+:root {
+    --max-site-container-width: 1600px;
+    --min-site-containte-width: 300px;
+
+    --jetbrains-mono: "JetBrains Mono", sans-serif;
+    --atziluth-script: "Atziluth", sans-serif;
+
+    --font-color: #ffffff;
+    --bg-color: #050505;
+    --skylight-blue-rgb: 54, 54, 225;
+    --telegram-color: 0, 174, 237;
+
+    @media (prefers-contrast: less) {
+    }
+
+    @media (prefers-contrast: more) {
+        --font-color: yellow;
+    }
+}

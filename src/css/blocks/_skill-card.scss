@@ -1,0 +1,24 @@
+.skill-card {
+    //border: 2px solid rgb(38, 38, 38);
+    //border-radius: 20px;
+}
+
+.skill-card__inner {
+    //padding: 12px;
+}
+
+.skill-card__title {
+    margin-bottom: torem(18);
+
+    @include adaptFontSize(20, 24);
+}
+
+.skill-card__technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-card__skill {
+    padding: 5px 15px;
+}

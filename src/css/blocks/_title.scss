@@ -1,0 +1,51 @@
+@mixin iconColor($text-color, $bg-color) {
+    //$blur: 42px;
+
+    box-sizing: content-box;
+    padding: torem(6);
+    color: $text-color;
+    background-color: $bg-color;
+    border-radius: torem(8);
+    //filter: drop-shadow($text-color 0px 0px 20px);
+    //-webkit-filter: drop-shadow($text-color 0px 0px 20px);
+    //-webkit-box-shadow: 0px 0px $blur 0px $text-color;
+    //-moz-box-shadow: 0px 0px $blur 0px $text-color;
+    //box-shadow: 0px 0px $blur 0px $text-color;
+}
+
+.title {
+    font-weight: 500;
+
+    &--with-icon {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+
+        & svg, span {
+            display: inline-flex;
+        }
+    }
+
+    &--600 {
+        font-weight: 600;
+    }
+
+    &--red-icon svg {
+        @include iconColor(rgb(221, 57, 57), rgba(221, 57, 57, 0.15));
+    }
+
+    &--purple-icon svg {
+        @include iconColor(rgb(120, 40, 255), rgba(120, 40, 255, 0.15));
+    }
+
+    &--skylight-blue-icon svg {
+        @include iconColor(rgb(var(--skylight-blue-rgb)), rgba(var(--skylight-blue-rgb), 0.15));
+    }
+
+    &--blue-icon svg {
+        @include iconColor(rgb(0, 125, 254), rgba(0, 125, 254, 0.15))
+    }
+}
+
+

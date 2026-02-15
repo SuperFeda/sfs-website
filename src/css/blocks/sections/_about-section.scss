@@ -1,0 +1,36 @@
+.about-section {
+    text-align: center;
+    margin-inline: 5%;
+    padding-block: torem(180);
+}
+
+.about-section__title {
+    margin-bottom: 3.5rem;
+    line-height: 1;
+
+    @include adaptFontSize(40, 60);
+}
+
+.about-section__description {
+    @include adaptFontSize(18, 22);
+}
+
+.about-section__span {
+    @include hover() {
+        text-decoration: underline;
+    }
+}
+
+.about-section__button {
+    padding: toem(18, 7) toem(18, 16);
+
+    @include adaptFontSize(14, 15);
+}
+
+.about-section__list {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}

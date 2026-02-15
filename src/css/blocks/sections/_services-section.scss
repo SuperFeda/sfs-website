@@ -1,0 +1,9 @@
+.services-section {
+
+}
+
+.services-section__title {
+    margin-bottom: torem(25);
+
+    @include adaptFontSize(39, 43);
+}
