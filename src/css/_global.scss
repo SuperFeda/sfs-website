@@ -10,17 +10,16 @@ body {
     background-color: var(--bg-color);
     font-family: var(--jetbrains-mono);
     font-weight: 300;
-
-    @include prefersContrast(less) {
-    }
-
-    @include prefersContrast(more) {
-    }
 }
 
 ::selection {
-    background-color: rgba(var(--skylight-blue-rgb), 0.5);
+    background-color: rgba(var(--skylight-blue-rgb), 0.45);
     color: white;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+    @include noDisplay();
 }
 
 a {
@@ -43,7 +42,6 @@ button {
     color: var(--font-color);
 
     @include lessMoreContrast() {
-        border-radius: 0;
         border-width: 1px;
         border-style: solid;
     }

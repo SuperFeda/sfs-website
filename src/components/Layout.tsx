@@ -8,8 +8,10 @@ export function Layout({children}: React.PropsWithChildren) {
     return (
         <div className={"container"}>
             <div id={"box"}>
-                <div className="gridPattern"></div>
-                <div className="radialOverlay"></div>
+                {/*<div style={{position:"sticky"}}>*/}
+                    <div className="gridPattern"></div>
+                    <div className="radialOverlay"></div>
+                {/*</div>*/}
                 <Header />
                 <main>
                     {children}

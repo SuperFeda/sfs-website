@@ -10,7 +10,7 @@
 .skill-card__title {
     margin-bottom: torem(18);
 
-    @include adaptFontSize(20, 24);
+    @include adaptFontSize(19, 24);
 }
 
 .skill-card__technology-list {
@@ -20,5 +20,10 @@
 }
 
 .skills-card__skill {
-    padding: 5px 15px;
+    padding: toem(16, 5) toem(16, 15);
+
+    @include adaptFontSize(14, 16);
+    @include tablet() {
+        padding: toem(15, 4) toem(15, 10);
+    }
 }

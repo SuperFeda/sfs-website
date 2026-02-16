@@ -1,11 +1,11 @@
 .button {
-    border-radius: torem(8);
+    border-radius: var(--border-8);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.65);
     transition: background-color 0.2s;
 
     @include hover() {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.07);
         border-color: #FFFFFF;
     }
 

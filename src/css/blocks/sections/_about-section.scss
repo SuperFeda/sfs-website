@@ -1,18 +1,22 @@
 .about-section {
     text-align: center;
     margin-inline: 5%;
-    padding-block: torem(180);
+    padding-block: torem(170);
+
+    @include tablet() {
+        padding-block: torem(50);
+    }
 }
 
 .about-section__title {
     margin-bottom: 3.5rem;
     line-height: 1;
 
-    @include adaptFontSize(40, 60);
+    @include adaptFontSize(35, 60);
 }
 
 .about-section__description {
-    @include adaptFontSize(18, 22);
+    @include adaptFontSize(16, 19);
 }
 
 .about-section__span {

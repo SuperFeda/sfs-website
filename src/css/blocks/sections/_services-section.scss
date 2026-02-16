@@ -5,5 +5,17 @@
 .services-section__title {
     margin-bottom: torem(25);
 
-    @include adaptFontSize(39, 43);
+    @include adaptFontSize(36, 43);
+}
+
+.services-section__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    //justify-content: center;
+    //align-items: center;
+}
+
+.services-section__service-card {
+    padding: torem(15);
 }

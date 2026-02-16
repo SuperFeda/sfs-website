@@ -5,15 +5,53 @@
     --jetbrains-mono: "JetBrains Mono", sans-serif;
     --atziluth-script: "Atziluth", sans-serif;
 
+    --transition-time: 0.25s;
+
+    --border-5: 0.3125rem;
+    --border-8: 0.5rem;
+    --border-10: 0.625rem;
+    --border-12: 0.75rem;
+    --border-15: 0.9375rem;
+    --border-20: 1.25rem;
+    --border-circle: 9999px;
+
     --font-color: #ffffff;
     --bg-color: #050505;
+    --purple-rgb: 120, 40, 255;
+    --red-rgb: 221, 57, 57;
+    --blue-rgb: 0, 125, 254;
     --skylight-blue-rgb: 54, 54, 225;
-    --telegram-color: 0, 174, 237;
+    --telegram-rgb: 0, 174, 237;
+    --discord-rgb: 88, 101, 242;
+    --python-rgb: 52, 117, 167;
+    --fastapi-rgb: 5, 152, 138;
+    --pydantic-rgb: 232, 53, 111;
+    --bash-rgb: 60, 69, 73;
+    --docker-rgb: 29, 99, 237;
+    --git-rgb: 240, 80, 48;
+    --javascript-rgb: 247, 224, 37;
+    --typescript-rgb: 55, 124, 200;
+    --reactjs-rgb: 88, 196, 220;
+    --nextjs-rgb: 25, 25, 25;
+    --html-rgb: 229, 83, 45;
+    --css-rgb: 107, 57, 156;
+    --scss-rgb: 207, 108, 156;
+
 
     @media (prefers-contrast: less) {
     }
 
     @media (prefers-contrast: more) {
         --font-color: yellow;
+    }
+
+    @media (prefers-contrast: more) or (prefers-contrast: less) {
+        --border-5: 0px;
+        --border-8: 0px;
+        --border-10: 0px;
+        --border-12: 0px;
+        --border-15: 0px;
+        --border-20: 0px;
+        --border-circle: 0px;
     }
 }
