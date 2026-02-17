@@ -26,16 +26,12 @@ export type SkillData = {
     useDefaultStyle: boolean
 }
 
-export type ServiceFeatureData = {
-    featureText: string
-}
-
 export type ServiceData = {
     title: string
     icon: ReactNode
     price: number
     colorName: string
-    features: ServiceFeatureData[]
+    description: string
 }
 
 export const H2_ICON_SIZE: number = 36
@@ -118,13 +114,13 @@ export const frontendSkills: SkillData[] = [
         icon: <TypeScriptIcon width={SKILL_ICON_SIZE} height={SKILL_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>
     },
     {
-        name: "Next",
+        name: "NextJS",
         id: "nextjs",
-        useDefaultStyle: false,
+        useDefaultStyle: true,
         icon: <NextIcon width={SKILL_ICON_SIZE} height={SKILL_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>
     },
     {
-        name: "React",
+        name: "ReactJS",
         id: "reactjs",
         useDefaultStyle: false,
         icon: <ReactIcon width={SKILL_ICON_SIZE} height={SKILL_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>
@@ -152,45 +148,42 @@ export const CICDSkills: SkillData[] = [
     },
 ]
 
+// export const DBSkills: SkillData[] = [
+//
+// ]
+
+// export const AIMLSkills: SkillData[] = [
+//
+// ]
+
 export const services: ServiceData[] = [
     {
         title: "Верстка",
         colorName: "purple",
-        price: 3000,
+        price: 2500,
         icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        features: [
-            {featureText: ""}
-        ]
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!",
     },
     {
-        title: "Сайт",
+        title: "Сайт / TG mini app",
         colorName: "red",
-        price: 6000,
+        price: 5000,
         icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        features: [
-            {featureText: ""}
-        ]
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     {
         title: "Telegram бот",
         colorName: "telegram",
-        price: 4000,
+        price: 3500,
         icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        features: [
-            {featureText: ""}
-        ]
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus.",
     },
     {
         title: "Discord бот",
         colorName: "discord",
-        price: 4000,
+        price: 3500,
         icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        features: [
-            {featureText: ""}
-        ]
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga.",
     },
 ]
 
-// export const AIMLSkills: SkillData[] = {
-//
-// }

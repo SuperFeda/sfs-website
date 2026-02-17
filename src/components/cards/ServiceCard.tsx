@@ -10,11 +10,12 @@ interface ServiceCardProps extends React.PropsWithChildren {
     titleText: string
     price: number
     color: string
+    description: string
     className?: string
     titleClassName?: string
 }
 
-export function ServiceCard({className = "", price, icon, color, titleText, titleClassName}: ServiceCardProps) {
+export function ServiceCard({className = "", price, description, icon, color, titleText, titleClassName}: ServiceCardProps) {
 
     return (
         <SpotlightCard className={`service-card ${className}`} spotlightColor={color}>
@@ -27,6 +28,7 @@ export function ServiceCard({className = "", price, icon, color, titleText, titl
                 />
                 <span className={"service-card__price"}>{`от ${formatPrice(price)} ₽`}</span>
             </div>
+            <p className={"service-card__description"}>{description}</p>
         </SpotlightCard>
     )
 }

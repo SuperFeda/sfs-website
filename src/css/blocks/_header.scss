@@ -1,3 +1,76 @@
 .header {
+    position: sticky;
+    top: 12px;
+    z-index: 10;
+}
 
+.header__navbar,
+.header__link-list,
+.header__list-point,
+.header__link-btn,
+.header__button-list,
+.header__right-panel,
+.header__button {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__right-panel {
+    gap: 30px;
+}
+
+.header__title {
+    @include adaptFontSize(19, 22);
+}
+
+.header__navbar {
+}
+
+.header__link-list {
+    flex-direction: row;
+    gap: 25px;
+}
+
+.header__list-point {
+}
+
+.header__object {
+    padding: 5px 20px;
+    border: 1px solid rgba(40, 40, 40, 1);
+    border-radius: var(--border-circle);
+
+    @include backdropBlur(10px, rgba(40, 40, 40, 0.3));
+}
+
+.header__link-btn {
+    flex-direction: row;
+    gap: 7px;
+    cursor: pointer;
+
+    @include hover() {
+        text-decoration: underline;
+    }
+}
+
+.header__button-list {
+    gap: 8px;
+}
+
+.header__button {
+    padding: 5px;
+    background-color: transparent;
+    border-radius: var(--border-8);
+}
+
+.header__burger-menu-modal {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
 }

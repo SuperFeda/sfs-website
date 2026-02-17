@@ -2,8 +2,6 @@ import {Layout} from "@/components/Layout.tsx";
 import {AboutSection} from "@/components/sections/AboutSection.tsx";
 import {SkillsSection} from "@/components/sections/SkillsSection.tsx";
 import {TitleWithIcon} from "@/components/TitleWithIcon.tsx";
-import {CodeIcon} from "@/components/icons/CodeIcon.tsx";
-import {SkillCard} from "@/components/cards/SkillCard.tsx";
 import {Skill} from "@/components/Skill";
 import {ServerIcon} from "@/components/icons/ServerIcon.tsx";
 import {
@@ -13,7 +11,9 @@ import {
     CICDSkills,
     frontendSkills,
     type SkillData,
-    H3_ICON_SIZE, services, type ServiceData, type ServiceFeatureData
+    H3_ICON_SIZE,
+    services,
+    type ServiceData
 } from "@/const.tsx";
 import {MagicBallIcon} from "@/components/icons/MagicBallIcon.tsx";
 import type {ReactNode} from "react";
@@ -23,12 +23,13 @@ import {GitHubIcon} from "@/components/icons/GitHubIcon.tsx";
 import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
 import {ModrinthIcon} from "@/components/icons/ModrinthIcon.tsx";
 import {ServicesSection} from "@/components/sections/ServicesSection.tsx";
+import {CodeIcon} from "@/components/icons/CodeIcon.tsx";
+import {SkillCard} from "@/components/cards/SkillCard.tsx";
 import {ServiceCard} from "@/components/cards/ServiceCard.tsx";
 
+
 const placeSkillElement = (skill: SkillData): ReactNode => (
-    skill.useDefaultStyle
-        ? <Skill icon={skill.icon} key={`skill_${skill.id}`} name={skill.name} className={`skills-card__skill`} />
-        : <Skill icon={skill.icon} key={`skill_${skill.id}`} name={skill.name} className={`skills-card__skill skill--${skill.id}`} />
+    <Skill icon={skill.icon} key={`skill_${skill.id}`} name={skill.name} className={!skill.useDefaultStyle ? `skills-card__skill skill--${skill.id}` : `skills-card__skill`} />
 )
 
 export function MainPage() {
@@ -127,37 +128,32 @@ export function MainPage() {
             {/*    </ul>*/}
             {/*</SkillsSection>*/}
 
-            {/*<ServicesSection id={CHAPTERS.SERVICES}>*/}
-            {/*    <TitleWithIcon*/}
-            {/*        icon={<CodeIcon iconColor={"currentColor"} height={H2_ICON_SIZE} width={H2_ICON_SIZE} />}*/}
-            {/*        titleText={"Услуги"}*/}
-            {/*        className={"services-section__title title--600 title--red-icon"}*/}
-            {/*    />*/}
-            {/*    <p className={"services-section__description"}>ANUS!</p>*/}
-            {/*    <ul className={"services-section__list"}>*/}
-            {/*        {*/}
-            {/*            services.map((service: ServiceData, i: number): ReactNode => (*/}
-            {/*                <li>*/}
-            {/*                    <ServiceCard*/}
-            {/*                        key={`service-card-${i}`}*/}
-            {/*                        className={"services-section__service-card"}*/}
-            {/*                        color={service.colorName}*/}
-            {/*                        titleText={service.title}*/}
-            {/*                        price={service.price}*/}
-            {/*                        titleClassName={`title--${service.colorName}-icon`}*/}
-            {/*                        icon={service.icon}*/}
-            {/*                    >*/}
-            {/*                        {*/}
-            {/*                            service.features.map((feature: ServiceFeatureData): ReactNode => (*/}
-            {/*                                <p>{feature.featureText}</p>*/}
-            {/*                            ))*/}
-            {/*                        }*/}
-            {/*                    </ServiceCard>*/}
-            {/*                </li>*/}
-            {/*            ))*/}
-            {/*        }*/}
-            {/*    </ul>*/}
-            {/*</ServicesSection>*/}
+            <ServicesSection id={CHAPTERS.SERVICES}>
+                <TitleWithIcon
+                    icon={<CodeIcon iconColor={"currentColor"} height={H2_ICON_SIZE} width={H2_ICON_SIZE} />}
+                    titleText={"Услуги"}
+                    className={"services-section__title title--600 title--red-icon"}
+                />
+                <p className={"services-section__description"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!</p>
+                <ul className={"services-section__list"}>
+                    {
+                        services.map((service: ServiceData, i: number): ReactNode => (
+                            <li>
+                                <ServiceCard
+                                    key={`service-card-${i}`}
+                                    className={"services-section__service-card"}
+                                    color={service.colorName}
+                                    titleText={service.title}
+                                    price={service.price}
+                                    description={service.description}
+                                    titleClassName={`title--${service.colorName}-icon`}
+                                    icon={service.icon}
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </ServicesSection>
         </Layout>
     )
 }

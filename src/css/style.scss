@@ -1,18 +1,18 @@
 // Fonts
-@import "fonts/index";
+@import "./fonts/index";
 
 // Base styles
 @import
-"const",
-"funcs",
-"vars",
-"media",
-"mixin",
-"normalize",
-"utils",
-"global"
+"./const",
+"./funcs",
+"./vars",
+"./media",
+"./mixin",
+"./normalize",
+"./utils",
+"./global"
 ;
 
 // BEM blocks
-@import "blocks/index";
+@import "./blocks/index";
 

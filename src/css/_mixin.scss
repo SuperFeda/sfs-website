@@ -23,7 +23,7 @@
 }
 
 @mixin adaptFontSize($min: 16, $max: 36) {
-    $max-viewport-width: 1600;  // максимальная ширина страницы по макету
+    $max-viewport-width: 1550;  // максимальная ширина страницы по макету
     $min-viewport-width: 300;   // минимальная ширина страницы по макету
 
     $max-size: math.div($max, $base-font-size);

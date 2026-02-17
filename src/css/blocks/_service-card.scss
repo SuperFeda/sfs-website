@@ -9,48 +9,31 @@
     gap: 10px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: torem(12);
 }
 
 .service-card__title {
     display: inline-flex;
+
+    @include adaptFontSize(18, 19)
+}
+
+.service-card__description {
+    @include adaptFontSize(16, 17);
 }
 
 .service-card__price {
     display: inline-flex;
+    font-weight: 600;
     padding: toem(17, 4) toem(17, 13);
     border-radius: var(--border-circle);
     //background-color: rgba(var(--skylight-blue-rgb), 0.15);
     background-color: rgb(12, 12, 38);
     color: rgb(var(--skylight-blue-rgb));
+    filter: drop-shadow(0px 2px 5px #000);
+    //-webkit-filter: drop-shadow(0px 2px 5px var(--bg-color));
 
-    @include adaptFontSize(16, 17)
+    @include adaptFontSize(15, 16);
 }
 
-.service-card__inner {
-    position: relative;
-    overflow: hidden;
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-    --spotlight-color: rgba(255, 255, 255, 0.05);
-    z-index: 1;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        pointer-events: none;
-        z-index: 2;
-    }
-
-    &:hover::before,
-    &:focus-within::before {
-        opacity: 0.6;
-    }
-}
 
