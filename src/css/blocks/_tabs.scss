@@ -1,0 +1,43 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+$outer-border-radius: 15;
+$padding: 5;
+$inner-border-radius: $outer-border-radius - $padding;
+
+.tabs__panel {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    background-color: #141414;
+    width: max-content;
+    padding: toem(16, $padding);
+    border-radius: var(--border-15);
+
+    @include mobile-s() {
+        gap: 6px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.tabs__trigger {
+    padding: toem(16, 5) toem(16, 15);
+    border-radius: toem(16, $inner-border-radius);
+    transition: background-color var(--transition-time);
+
+    @include adaptFontSize(14, 16);
+    @include hover() {
+        background-color: #1e1e1e;
+    }
+    @include mobile-s() {
+        padding-block: toem(16, 7);
+    }
+
+    &[data-state=active] {
+        background-color: #2d2d2d;
+    }
+}

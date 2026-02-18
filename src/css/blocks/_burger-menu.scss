@@ -1,0 +1,33 @@
+.burger-menu {
+    $offset: 8px;
+
+    width: 300px;
+    //min-width: 250px;
+    height: calc(100dvh - ($offset*2));
+    margin-top: $offset;
+    margin-right: $offset;
+    margin-bottom: $offset;
+}
+
+.burger-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger-menu__title {
+    margin-bottom: torem(25);
+}
+
+.burger-menu__list-point {
+    //@include adaptFontSize(17, 18);
+}
+
+.burger-menu__button {
+    display: inline-flex;
+    width: 100%;
+    padding: 8px 0;
+    gap: 8px;
+
+    @include adaptFontSize(17, 18);
+}

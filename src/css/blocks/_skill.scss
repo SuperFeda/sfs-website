@@ -84,4 +84,9 @@
         background-color: rgba(var(--scss-rgb), 0.25);
         border-color: rgba(var(--scss-rgb), 0.5);
     }
+
+    &--bem-methodology {
+        background-color: rgba(var(--bem-methodology-rgb), 0.25);
+        border-color: rgba(var(--bem-methodology-rgb), 0.5);
+    }
 }

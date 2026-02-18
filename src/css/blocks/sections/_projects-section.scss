@@ -1,0 +1,9 @@
+.projects-section {
+
+}
+
+.project-section__title {
+    margin-bottom: torem(20);
+
+    @include adaptFontSize(36, 43);
+}

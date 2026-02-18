@@ -7,16 +7,13 @@
 
     --transition-time: 0.25s;
 
-    --border-5: 0.3125rem;
     --border-8: 0.5rem;
-    --border-10: 0.625rem;
-    --border-12: 0.75rem;
     --border-15: 0.9375rem;
     --border-20: 1.25rem;
     --border-circle: 9999px;
 
     --font-color: #ffffff;
-    --bg-color: #050505;
+    --bg-color: #090909;
     --purple-rgb: 120, 40, 255;
     --red-rgb: 221, 57, 57;
     --blue-rgb: 0, 125, 254;
@@ -36,6 +33,7 @@
     --html-rgb: 229, 83, 45;
     --css-rgb: 107, 57, 156;
     --scss-rgb: 207, 108, 156;
+    --bem-methodology-rgb: 23, 161, 230;
 
 
     @media (prefers-contrast: less) {
@@ -46,10 +44,12 @@
     }
 
     @media (prefers-contrast: more) or (prefers-contrast: less) {
-        --border-5: 0px;
+        --jetbrains-mono: Arial, sans-serif;
+        --atziluth-script: Arial, sans-serif;
+
+        --transition-time: 0s;
+
         --border-8: 0px;
-        --border-10: 0px;
-        --border-12: 0px;
         --border-15: 0px;
         --border-20: 0px;
         --border-circle: 0px;

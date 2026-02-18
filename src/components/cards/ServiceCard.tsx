@@ -1,8 +1,8 @@
 import React, {type ReactNode} from "react";
 
 import {TitleWithIcon} from "@/components/TitleWithIcon.tsx";
-import {formatPrice} from "@/utils.ts";
-import {SpotlightCard} from "@/components/SpotlightCard.tsx";
+import {formatPrice} from "@/utils/utils.ts";
+import {SpotlightCard} from "@/components/cards/SpotlightCard.tsx";
 
 
 interface ServiceCardProps extends React.PropsWithChildren {

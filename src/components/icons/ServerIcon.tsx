@@ -1,4 +1,4 @@
-import type {IconProps} from "@/props.ts";
+import type {IconProps} from "@/utils/props.ts";
 
 export function ServerIcon({iconColor, ...svgProps}: IconProps) {
     return (

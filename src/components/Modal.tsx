@@ -48,6 +48,7 @@ export function Modal({children, className = "", open, onClose}: ModalProps) {
     }, [open])
 
     return (
+        open &&
         <dialog ref={modalRef} className={`modal ${className}`}>
             {children}
         </dialog>

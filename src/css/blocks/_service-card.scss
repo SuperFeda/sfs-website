@@ -19,7 +19,7 @@
 }
 
 .service-card__description {
-    @include adaptFontSize(16, 17);
+    @include adaptFontSize(14, 16);
 }
 
 .service-card__price {
@@ -27,9 +27,9 @@
     font-weight: 600;
     padding: toem(17, 4) toem(17, 13);
     border-radius: var(--border-circle);
-    //background-color: rgba(var(--skylight-blue-rgb), 0.15);
-    background-color: rgb(12, 12, 38);
-    color: rgb(var(--skylight-blue-rgb));
+    background-color: rgba(77, 89, 250, 0.15);
+    //background-color: rgb(12, 12, 38);
+    color: rgb(77, 89, 250);
     filter: drop-shadow(0px 2px 5px #000);
     //-webkit-filter: drop-shadow(0px 2px 5px var(--bg-color));
 
