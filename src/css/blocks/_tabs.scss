@@ -8,25 +8,21 @@ $outer-border-radius: 15;
 $padding: 5;
 $inner-border-radius: $outer-border-radius - $padding;
 
-.tabs__panel {
+.tabs__list {
     display: flex;
     flex-direction: row;
     gap: 3px;
     background-color: #141414;
-    width: max-content;
+    max-width: max-content;
+    width: auto;
+    overflow-x: auto;
     padding: toem(16, $padding);
     border-radius: var(--border-15);
-
-    @include mobile-s() {
-        gap: 6px;
-        flex-direction: column;
-        width: 100%;
-    }
 }
 
 .tabs__trigger {
-    padding: toem(16, 5) toem(16, 15);
-    border-radius: toem(16, $inner-border-radius);
+    padding: toem(15, 5) toem(15, 15);
+    border-radius: toem(15, $inner-border-radius);
     transition: background-color var(--transition-time);
 
     @include adaptFontSize(14, 16);
@@ -35,6 +31,10 @@ $inner-border-radius: $outer-border-radius - $padding;
     }
     @include mobile-s() {
         padding-block: toem(16, 7);
+    }
+
+    &--no-text-wrap {
+        text-wrap: nowrap;
     }
 
     &[data-state=active] {

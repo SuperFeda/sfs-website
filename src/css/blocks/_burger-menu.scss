@@ -1,8 +1,8 @@
 .burger-menu {
     $offset: 8px;
 
-    width: 300px;
-    //min-width: 250px;
+    width: 250px;
+    min-width: 235px;
     height: calc(100dvh - ($offset*2));
     margin-top: $offset;
     margin-right: $offset;

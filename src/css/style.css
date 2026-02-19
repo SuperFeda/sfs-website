@@ -434,6 +434,19 @@ svg * {
   font-style: italic;
 }
 
+html::-webkit-scrollbar, html::-webkit-scrollbar-thumb {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
 body {
   line-height: 1.4;
   height: 100%;
@@ -447,20 +460,6 @@ body {
 ::selection {
   background-color: rgba(var(--skylight-blue-rgb), 0.45);
   color: white;
-}
-
-::-webkit-scrollbar,
-::-webkit-scrollbar-thumb {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  border: 0 !important;
-  padding: 0 !important;
-  white-space: nowrap !important;
-  clip-path: inset(100%) !important;
-  clip: rect(0 0 0 0) !important;
-  overflow: hidden !important;
 }
 
 a {
@@ -496,7 +495,7 @@ button {
 @media (max-width: 1023px) {
   .about-section {
     padding-block: 3.125rem;
-    margin-inline: 3%;
+    margin-inline: 2%;
   }
 }
 
@@ -619,18 +618,8 @@ button {
   gap: 25px;
 }
 
-.header__object {
+.header__glass {
   padding: 5px 20px;
-  border: 1px solid rgb(40, 40, 40);
-  border-radius: var(--border-circle);
-  background-color: rgba(0, 0, 0, 0.9);
-}
-@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-  .header__object {
-    background-color: rgba(40, 40, 40, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
 }
 
 .header__link-btn {
@@ -660,7 +649,8 @@ button {
 }
 
 .burger-menu {
-  width: 300px;
+  width: 250px;
+  min-width: 235px;
   height: calc(100dvh - 16px);
   margin-top: 8px;
   margin-right: 8px;
@@ -867,7 +857,7 @@ button {
 
 .modal {
   position: fixed;
-  background-color: #282828;
+  background-color: #202020;
   border-radius: var(--border-20);
   border: 2px solid #393939;
   color: var(--font-color);
@@ -923,26 +913,21 @@ button {
   gap: 20px;
 }
 
-.tabs__panel {
+.tabs__list {
   display: flex;
   flex-direction: row;
   gap: 3px;
   background-color: #141414;
-  width: max-content;
+  max-width: max-content;
+  width: auto;
+  overflow-x: auto;
   padding: 0.3125em;
   border-radius: var(--border-15);
 }
-@media (max-width: 480px) {
-  .tabs__panel {
-    gap: 6px;
-    flex-direction: column;
-    width: 100%;
-  }
-}
 
 .tabs__trigger {
-  padding: 0.3125em 0.9375em;
-  border-radius: 0.625em;
+  padding: 0.3333333333em 1em;
+  border-radius: 0.6666666667em;
   transition: background-color var(--transition-time);
   font-size: clamp(0.875rem, 0.845rem + 0.16vw, 1rem);
 }
@@ -956,14 +941,30 @@ button {
     padding-block: 0.4375em;
   }
 }
+.tabs__trigger--no-text-wrap {
+  text-wrap: nowrap;
+}
 .tabs__trigger[data-state=active] {
   background-color: #2d2d2d;
+}
+
+.glass {
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: var(--border-circle);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  .glass {
+    background-color: rgba(40, 40, 40, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
 .footer__inner {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -971,14 +972,14 @@ button {
   padding-inline: 0.5rem;
 }
 
-.footer__copyright {
-  color: #323232;
-  font-size: clamp(0.875rem, 0.86rem + 0.08vw, 0.9375rem);
-}
-
 .footer__title {
   color: #5b5b5b;
-  font-size: clamp(1rem, 0.985rem + 0.08vw, 1.0625rem);
+  font-size: clamp(0.9375rem, 0.9075rem + 0.16vw, 1.0625rem);
+}
+
+.footer__copyright {
+  color: #323232;
+  font-size: clamp(0.75rem, 0.705rem + 0.24vw, 0.9375rem);
 }
 
 /*# sourceMappingURL=style.css.map */

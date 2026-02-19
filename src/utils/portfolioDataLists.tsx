@@ -16,6 +16,8 @@ import {GitHubIcon} from "@/components/icons/GitHubIcon.tsx";
 import {DockerIcon} from "@/components/icons/technology/DockerIcon.tsx";
 import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
 import {DrawingCompassIcon} from "@/components/icons/DrawingCompassIcon.tsx";
+import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
+import {DiscordIcon} from "@/components/icons/DiscordIcon.tsx";
 
 export const backendSkills: SkillData[] = [
     {
@@ -157,6 +159,13 @@ export const CICDSkills: SkillData[] = [
 
 export const services: ServiceData[] = [
     {
+        title: "Telegram бот",
+        colorName: "telegram",
+        price: 3500,
+        icon: <TelegramIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus.",
+    },
+    {
         title: "Вёрстка",
         colorName: "purple",
         price: 2500,
@@ -171,17 +180,10 @@ export const services: ServiceData[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     {
-        title: "Telegram бот",
-        colorName: "telegram",
-        price: 3500,
-        icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus.",
-    },
-    {
         title: "Discord бот",
         colorName: "discord",
         price: 3500,
-        icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
+        icon: <DiscordIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga.",
     },
 ]

@@ -9,8 +9,8 @@ export function Header() {
     return (
         <header className={"header"}>
             <div className={"header__inner"}>
-                <h1 className={"header__title header__object title"}>SυρεrFeδα</h1>
-                <div className={"header__right-panel header__object"}>
+                <h1 className={"header__title header__glass glass title"}>SυρεrFeδα</h1>
+                <div className={"header__right-panel header__glass glass"}>
                     <nav className={"header__navbar hidden-mobile"}>
                         <ul className={"header__link-list"}>
                             {

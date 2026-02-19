@@ -127,11 +127,11 @@ export function MainPage() {
                     className={"project-section__title title--600 title--red-icon"}
                 />
                 <Tabs defaultValue={PROJECT_TABS.ALL_PROJECTS} className={"project-section__tabs tabs"}>
-                    <TabsList className={""}>
-                        <TabsTrigger value={PROJECT_TABS.ALL_PROJECTS}>Все работы</TabsTrigger>
-                        <TabsTrigger value={PROJECT_TABS.WEBSITES}>Сайты</TabsTrigger>
-                        <TabsTrigger value={PROJECT_TABS.BOTS}>Боты</TabsTrigger>
-                        <TabsTrigger value={PROJECT_TABS.OTHER}>Другие</TabsTrigger>
+                    <TabsList className={"project-section__tabs-list"}>
+                        <TabsTrigger value={PROJECT_TABS.ALL_PROJECTS} className={"tabs__trigger--no-text-wrap"}>Все работы</TabsTrigger>
+                        <TabsTrigger value={PROJECT_TABS.WEBSITES} className={"tabs__trigger--no-text-wrap"}>Сайты</TabsTrigger>
+                        <TabsTrigger value={PROJECT_TABS.BOTS} className={"tabs__trigger--no-text-wrap"}>Боты</TabsTrigger>
+                        <TabsTrigger value={PROJECT_TABS.OTHER} className={"tabs__trigger--no-text-wrap"}>Другие</TabsTrigger>
                     </TabsList>
                     <TabsContent value={PROJECT_TABS.ALL_PROJECTS}>Все работы</TabsContent>
                     <TabsContent value={PROJECT_TABS.WEBSITES}>Работы по сайтам</TabsContent>

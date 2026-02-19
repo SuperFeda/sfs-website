@@ -1,5 +1,9 @@
 html {
 
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+        @include noDisplay();
+    }
 }
 
 body {
@@ -15,11 +19,6 @@ body {
 ::selection {
     background-color: rgba(var(--skylight-blue-rgb), 0.45);
     color: white;
-}
-
-::-webkit-scrollbar,
-::-webkit-scrollbar-thumb {
-    @include noDisplay();
 }
 
 a {

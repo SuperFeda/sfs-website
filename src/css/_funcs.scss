@@ -23,3 +23,12 @@
 @function tintColor($color, $weight) {
     @return mix(#FFFFFF, $color, $weight);
 }
+
+@function average($from, $to, $round: false) {
+    $average-num: math.div($from+$to, 2);
+    @if ($round) {
+        @return round($average-num);
+    } @else {
+        @return $average-num;
+    }
+}

@@ -46,7 +46,7 @@ function TabsList({
             data-slot="tabs-list"
             data-variant={variant}
             // className={cn(tabsListVariants({variant}), className)}
-            className={`tabs__panel ${className}`}
+            className={`tabs__list ${className}`}
             {...props}
         />
     )
