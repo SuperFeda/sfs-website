@@ -1,5 +1,5 @@
 import {CHAPTERS, DEFAULT_ICON_COLOR, H3_ICON_SIZE, SKILL_ICON_SIZE} from "@/utils/const.ts";
-import type {ServiceData, SkillData} from "@/utils/types.ts";
+import type {ServiceData, SkillData, ProjectData} from "@/utils/types.ts";
 import {PythonIcon} from "@/components/icons/technology/PythonIcon.tsx";
 import {CodeIcon} from "@/components/icons/CodeIcon.tsx";
 import {PydanticIcon} from "@/components/icons/technology/PydanticIcon.tsx";
@@ -18,6 +18,8 @@ import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
 import {DrawingCompassIcon} from "@/components/icons/DrawingCompassIcon.tsx";
 import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
 import {DiscordIcon} from "@/components/icons/DiscordIcon.tsx";
+import {RulerIcon} from "@/components/RulerIcon.tsx";
+import {InternetIcon} from "@/components/icons/InternetIcon.tsx";
 
 export const backendSkills: SkillData[] = [
     {
@@ -169,14 +171,14 @@ export const services: ServiceData[] = [
         title: "Вёрстка",
         colorName: "purple",
         price: 2500,
-        icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
+        icon: <RulerIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!",
     },
     {
         title: "Сайт / TG mini app",
         colorName: "red",
         price: 5000,
-        icon: <GitIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
+        icon: <InternetIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     {
@@ -215,3 +217,156 @@ export const headerLinks = [
     },
 ]
 
+export const projects: ProjectData[] = [
+    {
+        type: "other",
+        title: "aioheleket",
+        bgImageURL: "https://heleket.com/_next/image?url=%2Fimg%2Fmain-page%2Ffirst-block%2Fmain-background.webp&w=1920&q=75",
+        description: "Асинхронная Python библиотека для API криптоплатежей Heleket.",
+        baseStack: [
+            {
+                name: "aiohttp",
+                id: "aiohttp",
+                useDefaultStyle: true
+            },
+            {
+                name: "Pydantic",
+                id: "pydantic",
+                useDefaultStyle: false,
+                icon: <PydanticIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+        ],
+        otherStack: [
+            {
+                name: "setuptools",
+                id: "setuptools",
+                useDefaultStyle: true
+            }
+        ],
+        buttons: [
+            {
+                text: "GitHub",
+                href: "https://github.com/SuperFeda/aioheleket",
+                icon: <GitHubIcon width={16} height={16} iconColor={DEFAULT_ICON_COLOR}/>
+            }
+        ]
+    },
+    {
+        type: "bot",
+        title: "StarChannel",
+        description: "Telegram бот для покупки временной подписки в ТГ канал за звёзды и криптовалюту.",
+        baseStack: [
+            {
+                name: "Python",
+                id: "python",
+                useDefaultStyle: false,
+                icon: <PythonIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+            {
+                name: "aiogram",
+                id: "aiogram",
+                useDefaultStyle: true,
+            },
+            {
+                name: "SQLAlchemy",
+                id: "sqlalchemy",
+                useDefaultStyle: true,
+            },
+            {
+                name: "SQLite",
+                id: "sqlite",
+                useDefaultStyle: true,
+            },
+            {
+                name: "apscheduler",
+                id: "apscheduler",
+                useDefaultStyle: true,
+            },
+        ],
+        otherStack: [
+            {
+                name: "aiogram dialog",
+                id: "aiogram_dialog",
+                useDefaultStyle: true,
+            },
+        ],
+    },
+    {
+        type: "bot",
+        title: "SkylightServices Bot",
+        description: "Discord бот для обработки заказов на сервере.",
+        baseStack: [
+            {
+                name: "Python",
+                id: "python",
+                useDefaultStyle: false,
+                icon: <PythonIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+            {
+                name: "Disnake",
+                id: "disnake",
+                useDefaultStyle: true,
+            },
+            {
+                name: "SQLAlchemy",
+                id: "sqlalchemy",
+                useDefaultStyle: true,
+            },
+            {
+                name: "SQLite",
+                id: "sqlite",
+                useDefaultStyle: true,
+            },
+        ],
+    },
+    {
+        type: "website",
+        title: "SF's Site",
+        description: "Мой сайт-портфолио.",
+        bgImageURL: "./../img/sfs_site.png",
+        baseStack: [
+            {
+                name: "React",
+                id: "reactjs",
+                useDefaultStyle: false,
+                icon: <ReactIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+            {
+                name: "TypeScript",
+                id: "typescript",
+                useDefaultStyle: false,
+                icon: <TypeScriptIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+            {
+                name: "SCSS",
+                id: "scss",
+                useDefaultStyle: false,
+                icon: <SASSIcon width={18} height={18} iconColor={DEFAULT_ICON_COLOR} />
+            },
+            {
+                name: "БЭМ",
+                id: "bem-methodology",
+                useDefaultStyle: false,
+            },
+            {
+                name: "Zustand",
+                id: "zustand",
+                useDefaultStyle: true,
+            },
+        ],
+        otherStack: [
+            {
+                name: "shadcn ui",
+                id: "shadcn-ui",
+                useDefaultStyle: true,
+            },
+        ],
+        buttons: [
+            {
+                text: "GitHub",
+                href: "https://github.com/SuperFeda/aioheleket",
+                icon: <GitHubIcon width={16} height={16} iconColor={DEFAULT_ICON_COLOR}/>
+            },
+        ]
+    },
+]

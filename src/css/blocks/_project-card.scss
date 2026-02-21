@@ -1,0 +1,69 @@
+.project-card {
+    border-radius: var(--border-20);
+    border: 2px solid #5b5b5b;
+    overflow: hidden;
+}
+
+.project-card__content {
+    width: 100%;
+    height: 100%;
+
+    @include backdropBlur(2px, transparent);
+
+    & > *:not(:last-child) {
+        margin-bottom: torem(10);
+    }
+}
+
+.project-card__title {
+    @include adaptFontSize(17, 20);
+}
+
+.project-card__description {
+}
+
+.project-card__stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 7px;
+    align-items: center;
+}
+
+.project-card__skill {
+    display: inline-flex;
+    padding: toem(14, 3) toem(14, 6);
+
+    @include adaptFontSize(12, 13);
+}
+
+.project-card__button-hover-content {
+    padding: toem(14, 3) toem(14, 9);
+    border-radius: var(--border-8);
+
+    @include adaptFontSize(13, 14);
+}
+
+.project-card__button-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-card__button {
+    padding: toem(13, 3) toem(13, 10);
+
+    @include adaptFontSize(13, 14);
+}
+
+.project-card__button-hover-content-popup {
+    padding: toem(14, 6);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 250px;
+    gap: 6px;
+
+    @include backdropBlur(3px, rgba(37, 37, 37, 0.6));
+}
+

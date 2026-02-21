@@ -4,9 +4,9 @@
     gap: 20px;
 }
 
-$outer-border-radius: 15;
-$padding: 5;
-$inner-border-radius: $outer-border-radius - $padding;
+$list-border-radius: 15;
+$list-padding: 4;
+$trigger-border-radius: $list-border-radius - $list-padding;
 
 .tabs__list {
     display: flex;
@@ -16,13 +16,13 @@ $inner-border-radius: $outer-border-radius - $padding;
     max-width: max-content;
     width: auto;
     overflow-x: auto;
-    padding: toem(16, $padding);
+    padding: toem(16, $list-padding);
     border-radius: var(--border-15);
 }
 
 .tabs__trigger {
     padding: toem(15, 5) toem(15, 15);
-    border-radius: toem(15, $inner-border-radius);
+    border-radius: toem(15, $trigger-border-radius);
     transition: background-color var(--transition-time);
 
     @include adaptFontSize(14, 16);

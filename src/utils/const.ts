@@ -7,7 +7,7 @@ export const CHAPTERS = {
 }
 
 export const PROJECT_TABS = {
-    ALL_PROJECTS: "all-projets",
+    ALL_PROJECTS: "all-projects",
     BOTS: "bot",
     WEBSITES: "website",
     OTHER: "other"

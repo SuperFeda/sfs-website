@@ -13,9 +13,10 @@ import {
     services,
     backendSkills,
     frontendSkills,
-    CICDSkills
+    CICDSkills,
+    projects
 } from "@/utils/portfolioDataLists.tsx"
-import type {ServiceData, SkillData} from "@/utils/types.ts"
+import type {ProjectData, ServiceData, SkillData} from "@/utils/types.ts"
 import {MagicBallIcon} from "@/components/icons/MagicBallIcon.tsx";
 import {type ReactNode} from "react";
 import {CodeMergeIcon} from "@/components/icons/CodeMergeIcon.tsx";
@@ -29,6 +30,7 @@ import {ServiceCard} from "@/components/cards/ServiceCard.tsx";
 import {ProjectsSection} from "@/components/sections/ProjectsSection.tsx";
 import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs.tsx";
+import {ProjectCard, ProjectCardOtherStack, ProjectCardStack, ProjectCardAnchor, ProjectCardButtonList} from "@/components/cards/ProjectCard.tsx";
 
 
 const placeSkillElement = (skill: SkillData): ReactNode => (
@@ -38,6 +40,36 @@ const placeSkillElement = (skill: SkillData): ReactNode => (
         name={skill.name}
         className={!skill.useDefaultStyle ? `skills-card__skill skill--${skill.id}` : `skills-card__skill`}
     />
+)
+
+const placeProjectCard = (project: ProjectData) => (
+    <ProjectCard
+        className={"projects-section__project-card"}
+        titleText={project.title}
+        description={project.description}
+        bgImageURL={project.bgImageURL}
+    >
+        <ProjectCardStack technologyList={project.baseStack}>
+            {
+                project.otherStack &&
+                <ProjectCardOtherStack
+                    openDelay={25}
+                    closeDelay={100}
+                    technologyList={project.otherStack}
+                />
+            }
+        </ProjectCardStack>
+        {
+            project.buttons &&
+            <ProjectCardButtonList>
+                {
+                    project.buttons.map((btn) => (
+                        <ProjectCardAnchor href={btn.href} icon={btn.icon}>{btn.text}</ProjectCardAnchor>
+                    ))
+                }
+            </ProjectCardButtonList>
+        }
+    </ProjectCard>
 )
 
 export function MainPage() {
@@ -124,19 +156,46 @@ export function MainPage() {
                 <TitleWithIcon
                     icon={<FolderIcon iconColor={"currentColor"} height={H2_ICON_SIZE} width={H2_ICON_SIZE} />}
                     titleText={"Мои проекты"}
-                    className={"project-section__title title--600 title--red-icon"}
+                    className={"projects-section__title title--600 title--red-icon"}
                 />
-                <Tabs defaultValue={PROJECT_TABS.ALL_PROJECTS} className={"project-section__tabs tabs"}>
-                    <TabsList className={"project-section__tabs-list"}>
+                <Tabs defaultValue={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__tabs tabs"}>
+                    <TabsList className={"projects-section__tabs-list"}>
                         <TabsTrigger value={PROJECT_TABS.ALL_PROJECTS} className={"tabs__trigger--no-text-wrap"}>Все работы</TabsTrigger>
                         <TabsTrigger value={PROJECT_TABS.WEBSITES} className={"tabs__trigger--no-text-wrap"}>Сайты</TabsTrigger>
                         <TabsTrigger value={PROJECT_TABS.BOTS} className={"tabs__trigger--no-text-wrap"}>Боты</TabsTrigger>
                         <TabsTrigger value={PROJECT_TABS.OTHER} className={"tabs__trigger--no-text-wrap"}>Другие</TabsTrigger>
                     </TabsList>
-                    <TabsContent value={PROJECT_TABS.ALL_PROJECTS}>Все работы</TabsContent>
-                    <TabsContent value={PROJECT_TABS.WEBSITES}>Работы по сайтам</TabsContent>
-                    <TabsContent value={PROJECT_TABS.BOTS}>работы по ботам</TabsContent>
-                    <TabsContent value={PROJECT_TABS.OTHER}>Другие работы</TabsContent>
+                    <TabsContent value={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__project-list"}>
+                        {
+                            projects.map((project: ProjectData) => (
+                                placeProjectCard(project)
+                            ))
+                        }
+                    </TabsContent>
+
+                    <TabsContent value={PROJECT_TABS.WEBSITES} className={"projects-section__project-list"}>
+                        {
+                            projects.map((project: ProjectData) => (
+                                project.type === "website" && placeProjectCard(project)
+                            ))
+                        }
+                    </TabsContent>
+
+                    <TabsContent value={PROJECT_TABS.BOTS} className={"projects-section__project-list"}>
+                        {
+                            projects.map((project: ProjectData) => (
+                                project.type === "bot" && placeProjectCard(project)
+                            ))
+                        }
+                    </TabsContent>
+
+                    <TabsContent value={PROJECT_TABS.OTHER} className={"projects-section__project-list"}>
+                        {
+                            projects.map((project: ProjectData) => (
+                                project.type === "other" && placeProjectCard(project)
+                            ))
+                        }
+                    </TabsContent>
                 </Tabs>
             </ProjectsSection>
 

@@ -1,0 +1,15 @@
+.button-hover-content {
+    border: none;
+    background-color: #1e1e1e;
+    transition: background-color var(--transition-time);
+
+    @include hover() {
+        background-color: #252525;
+    }
+}
+
+.button-hover-content__content {
+    background-color: #222222;
+    border-radius: var(--border-15);
+    z-index: 99;
+}
