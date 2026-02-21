@@ -13,8 +13,8 @@ export function BurgerMenuModal({className="", open, onClose}: BurgerMenuModalPr
             <h2 className={"burger-menu__title title"}>SυρεrFeδα</h2>
             <ul className={"burger-menu__list"}>
                 {
-                    headerLinks.map((linkData) => (
-                        <li className={"burger-menu__list-point"}>
+                    headerLinks.map((linkData, i: number) => (
+                        <li className={"burger-menu__list-point"} key={`burger_menu_${i}`}>
                             <a
                                 className={"burger-menu__button button button--no-border"}
                                 href={linkData.link}

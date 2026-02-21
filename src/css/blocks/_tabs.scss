@@ -11,23 +11,24 @@ $trigger-border-radius: $list-border-radius - $list-padding;
 .tabs__list {
     display: flex;
     flex-direction: row;
-    gap: 3px;
     background-color: #141414;
     max-width: max-content;
     width: auto;
     overflow-x: auto;
-    padding: toem(16, $list-padding);
+    border: 1px solid #202020;
+    //padding: toem(16, $list-padding);
     border-radius: var(--border-15);
 }
 
 .tabs__trigger {
     padding: toem(15, 5) toem(15, 15);
-    border-radius: toem(15, $trigger-border-radius);
+    border-radius: 0;
     transition: background-color var(--transition-time);
 
     @include adaptFontSize(14, 16);
     @include hover() {
         background-color: #1e1e1e;
+        border-color: #202020;
     }
     @include mobile-s() {
         padding-block: toem(16, 7);

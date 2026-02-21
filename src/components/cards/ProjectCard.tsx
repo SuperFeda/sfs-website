@@ -59,7 +59,7 @@ export function ProjectCardStack({children, technologyList}: React.PropsWithChil
                 technologyList.map((technology: SkillData): ReactNode => (
                     <li className={"project-card__list-point"}>
                         <Skill
-                            key={`technology_${technology.id}`}
+                            key={`project_card_technology_${technology.id}`}
                             name={technology.name}
                             icon={technology.icon}
                             className={!technology.useDefaultStyle ? `project-card__skill skill--${technology.id}` : `project-card__skill`}
@@ -89,7 +89,7 @@ export function ProjectCardOtherStack({openDelay, closeDelay, technologyList}: P
                     technologyList.map((technology: SkillData): ReactNode => (
                         <Skill
                             icon={technology.icon}
-                            key={`technology_${technology.id}`}
+                            key={`project_card_technology_${technology.id}`}
                             name={technology.name}
                             className={!technology.useDefaultStyle ? `project-card__skill skill--${technology.id}` : `project-card__skill`}
                         />

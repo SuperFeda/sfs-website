@@ -42,8 +42,9 @@ const placeSkillElement = (skill: SkillData): ReactNode => (
     />
 )
 
-const placeProjectCard = (project: ProjectData) => (
+const placeProjectCard = (project: ProjectData, i: number) => (
     <ProjectCard
+        key={`project_card_${project.type}_${i}`}
         className={"projects-section__project-card"}
         titleText={project.title}
         description={project.description}
@@ -63,8 +64,8 @@ const placeProjectCard = (project: ProjectData) => (
             project.buttons &&
             <ProjectCardButtonList>
                 {
-                    project.buttons.map((btn) => (
-                        <ProjectCardAnchor href={btn.href} icon={btn.icon}>{btn.text}</ProjectCardAnchor>
+                    project.buttons.map((btn, i: number) => (
+                        <ProjectCardAnchor key={`project_card_btn_${i}`} href={btn.href} icon={btn.icon}>{btn.text}</ProjectCardAnchor>
                     ))
                 }
             </ProjectCardButtonList>
@@ -80,7 +81,11 @@ export function MainPage() {
                 <div className="radialOverlay"></div>
                 <h1 className={"about-section__title title"}>Im SuperFeda<br/><span className={"skylight-blue-text italic-style"}>Full-stack</span> разработчик</h1>
                 <p className={"about-section__description"}>
-                    Я <span className={"skylight-blue-text"}>full-stack</span> разработчик, специализируюсь на создании надёжных веб-платформ и ботов. На бэкенде использую <span className={"python-text"}>Python</span>, <span className={"fastapi-text"}>FastAPI</span> и <span className={"pydantic-text"}>Pydantic</span> для построения эффективных API. Фронтенд разрабатываю на <span className={"typescript-text"}>TypeScript</span>, <span className={"react-text"}>React</span> и Next.js, верстаю с использованием <span className={"scss-text"}>SCSS</span> вместе с <span className={"bem-methodology-text"}>БЭМ методологией</span>. Также создаю ботов для <span className={"telegram-text"}>Telegram</span> и <span className={"discord-text"}>Discord</span>.
+                    Я <span className={"skylight-blue-text"}>full-stack</span> разработчик, специализируюсь на создании надёжных веб-платформ и ботов.
+                    На бэкенде использую <span className={"python-text"}>Python</span>, <span className={"fastapi-text"}>FastAPI</span> и <span className={"pydantic-text"}>Pydantic</span> для построения эффективных API.
+                    Фронтенд разрабатываю на <span className={"typescript-text"}>TypeScript</span>, <span className={"react-text"}>React</span> и Next.js,
+                    верстаю с использованием <span className={"scss-text"}>SCSS</span> вместе с <span className={"bem-methodology-text"}>БЭМ методологией</span>.
+                    Также создаю ботов для <span className={"telegram-text"}>Telegram</span> и <span className={"discord-text"}>Discord</span>.
                 </p>
                 <ul className={"about-section__list"}>
                     <li className={"about-section__list-point"}>
@@ -167,32 +172,32 @@ export function MainPage() {
                     </TabsList>
                     <TabsContent value={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__project-list"}>
                         {
-                            projects.map((project: ProjectData) => (
-                                placeProjectCard(project)
+                            projects.map((project: ProjectData, i: number) => (
+                                placeProjectCard(project, i)
                             ))
                         }
                     </TabsContent>
 
                     <TabsContent value={PROJECT_TABS.WEBSITES} className={"projects-section__project-list"}>
                         {
-                            projects.map((project: ProjectData) => (
-                                project.type === "website" && placeProjectCard(project)
+                            projects.map((project: ProjectData, i: number) => (
+                                project.type === "website" && placeProjectCard(project, i)
                             ))
                         }
                     </TabsContent>
 
                     <TabsContent value={PROJECT_TABS.BOTS} className={"projects-section__project-list"}>
                         {
-                            projects.map((project: ProjectData) => (
-                                project.type === "bot" && placeProjectCard(project)
+                            projects.map((project: ProjectData, i: number) => (
+                                project.type === "bot" && placeProjectCard(project, i)
                             ))
                         }
                     </TabsContent>
 
                     <TabsContent value={PROJECT_TABS.OTHER} className={"projects-section__project-list"}>
                         {
-                            projects.map((project: ProjectData) => (
-                                project.type === "other" && placeProjectCard(project)
+                            projects.map((project: ProjectData, i: number) => (
+                                project.type === "other" && placeProjectCard(project, i)
                             ))
                         }
                     </TabsContent>
@@ -213,7 +218,7 @@ export function MainPage() {
                         services.map((service: ServiceData, i: number): ReactNode => (
                             <li>
                                 <ServiceCard
-                                    key={`service-card-${i}`}
+                                    key={`service_card_${i}`}
                                     className={"services-section__service-card"}
                                     color={service.colorName}
                                     titleText={service.title}

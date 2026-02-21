@@ -1,6 +1,5 @@
 .project-card {
-    border-radius: var(--border-20);
-    border: 2px solid #5b5b5b;
+    border: 2px solid #1e1e1e;
     overflow: hidden;
 }
 
@@ -15,11 +14,17 @@
     }
 }
 
+.project-card,
+.project-card__content {
+    border-radius: var(--border-20);
+}
+
 .project-card__title {
-    @include adaptFontSize(17, 20);
+    @include adaptFontSize(18, 20);
 }
 
 .project-card__description {
+    @include adaptFontSize(14, 16);
 }
 
 .project-card__stack-list {
@@ -32,7 +37,7 @@
 
 .project-card__skill {
     display: inline-flex;
-    padding: toem(14, 3) toem(14, 6);
+    padding: toem(14, 3) toem(14, 8);
 
     @include adaptFontSize(12, 13);
 }

@@ -558,7 +558,7 @@ button {
 .services-section__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 @media (max-width: 1023px) {
   .services-section__list {
@@ -649,7 +649,7 @@ button {
 }
 
 .header__glass {
-  padding: 5px 20px;
+  padding: 0.3125rem 1.25rem;
 }
 
 .header__link-btn {
@@ -668,13 +668,13 @@ button {
 }
 
 .header__button {
-  padding: 5px;
+  padding: 0.3125rem;
   background-color: transparent;
   border-radius: var(--border-8);
 }
 
 .header__burger-menu-modal {
-  padding: 20px;
+  padding: 1.25rem;
   width: 100%;
 }
 
@@ -905,7 +905,7 @@ button {
 }
 
 .service-card {
-  border: 2px solid #393939;
+  border: 2px solid #1e1e1e;
   border-radius: var(--border-20);
 }
 
@@ -920,7 +920,7 @@ button {
 
 .service-card__title {
   display: inline-flex;
-  font-size: clamp(1.125rem, 1.11rem + 0.08vw, 1.1875rem);
+  font-size: clamp(1.125rem, 1.095rem + 0.16vw, 1.25rem);
 }
 
 .service-card__description {
@@ -947,24 +947,24 @@ button {
 .tabs__list {
   display: flex;
   flex-direction: row;
-  gap: 3px;
   background-color: #141414;
   max-width: max-content;
   width: auto;
   overflow-x: auto;
-  padding: 0.25em;
+  border: 1px solid #202020;
   border-radius: var(--border-15);
 }
 
 .tabs__trigger {
   padding: 0.3333333333em 1em;
-  border-radius: 0.7333333333em;
+  border-radius: 0;
   transition: background-color var(--transition-time);
   font-size: clamp(0.875rem, 0.845rem + 0.16vw, 1rem);
 }
 @media (hover: hover) {
   .tabs__trigger:hover {
     background-color: #1e1e1e;
+    border-color: #202020;
   }
 }
 @media (max-width: 480px) {
@@ -993,8 +993,7 @@ button {
 }
 
 .project-card {
-  border-radius: var(--border-20);
-  border: 2px solid #5b5b5b;
+  border: 2px solid #1e1e1e;
   overflow: hidden;
 }
 
@@ -1014,8 +1013,17 @@ button {
   margin-bottom: 0.625rem;
 }
 
+.project-card,
+.project-card__content {
+  border-radius: var(--border-20);
+}
+
 .project-card__title {
-  font-size: clamp(1.0625rem, 1.0175rem + 0.24vw, 1.25rem);
+  font-size: clamp(1.125rem, 1.095rem + 0.16vw, 1.25rem);
+}
+
+.project-card__description {
+  font-size: clamp(0.875rem, 0.845rem + 0.16vw, 1rem);
 }
 
 .project-card__stack-list {
@@ -1028,7 +1036,7 @@ button {
 
 .project-card__skill {
   display: inline-flex;
-  padding: 0.2142857143em 0.4285714286em;
+  padding: 0.2142857143em 0.5714285714em;
   font-size: clamp(0.75rem, 0.735rem + 0.08vw, 0.8125rem);
 }
 

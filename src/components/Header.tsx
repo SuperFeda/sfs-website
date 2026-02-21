@@ -14,8 +14,8 @@ export function Header() {
                     <nav className={"header__navbar hidden-mobile"}>
                         <ul className={"header__link-list"}>
                             {
-                                headerLinks.map((linkData) => (
-                                    <li className={"header__list-point"}>
+                                headerLinks.map((linkData, i: number) => (
+                                    <li className={"header__list-point"} key={`header_link_${i}`}>
                                         <a className={"header__link-btn"} href={linkData.link} title={linkData.title}>
                                             {linkData.icon}
                                             <span>{linkData.text}</span>

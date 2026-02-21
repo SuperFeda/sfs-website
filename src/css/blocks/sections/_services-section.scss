@@ -20,7 +20,7 @@ $bottom-offset: 20;
 .services-section__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+    gap: 25px;
 
     @include tablet() {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
