@@ -7,7 +7,7 @@ $bottom-offset: 20;
 .services-section__title {
     margin-bottom: torem($bottom-offset);
 
-    @include adaptFontSize(36, 43);
+    @include adaptFontSize(32, 43);
 }
 
 .services-section__description {

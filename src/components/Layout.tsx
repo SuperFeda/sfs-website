@@ -3,11 +3,9 @@ import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer.tsx";
 import {BurgerMenuModal} from "@/components/BurgerMenuModal.tsx";
-import {useBurgerMenuStore} from "@/stores/useBurgerMenuStore.ts";
 
 
 export function Layout({children}: React.PropsWithChildren) {
-    const {isMenuOpen, toggleMenu} = useBurgerMenuStore();
 
     return (
         <div className={"container"}>
@@ -22,8 +20,6 @@ export function Layout({children}: React.PropsWithChildren) {
                 </main>
                 <BurgerMenuModal
                     className={"header__burger-menu-modal visible-mobile"}
-                    onClose={toggleMenu}
-                    open={isMenuOpen}
                 />
                 <Footer />
             </div>

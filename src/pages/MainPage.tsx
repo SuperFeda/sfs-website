@@ -30,7 +30,13 @@ import {ServiceCard} from "@/components/cards/ServiceCard.tsx";
 import {ProjectsSection} from "@/components/sections/ProjectsSection.tsx";
 import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs.tsx";
-import {ProjectCard, ProjectCardOtherStack, ProjectCardStack, ProjectCardAnchor, ProjectCardButtonList} from "@/components/cards/ProjectCard.tsx";
+import {
+    ProjectCard,
+    ProjectCardOtherStack,
+    ProjectCardStack,
+    ProjectCardAnchor,
+    ProjectCardButtonList
+} from "@/components/cards/ProjectCard.tsx";
 
 
 const placeSkillElement = (skill: SkillData): ReactNode => (

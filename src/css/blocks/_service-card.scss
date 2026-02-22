@@ -27,11 +27,9 @@
     font-weight: 600;
     padding: toem(17, 4) toem(17, 13);
     border-radius: var(--border-circle);
-    background-color: rgba(77, 89, 250, 0.15);
-    //background-color: rgb(12, 12, 38);
-    color: rgb(77, 89, 250);
-    filter: drop-shadow(0px 2px 5px #000);
-    //-webkit-filter: drop-shadow(0px 2px 5px var(--bg-color));
+    background-color: rgba(var(--pale-blue), 0.15);
+    color: rgb(var(--pale-blue));
+    filter: drop-shadow(0px 2px 5px #000000);
 
     @include adaptFontSize(15, 16);
 }

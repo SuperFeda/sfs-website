@@ -1,0 +1,75 @@
+.drawer {
+
+}
+
+.drawer__overlay {
+    // Базовые стили (аналоги fixed inset-0 z-50 bg-black/50)
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.5); // соответствует bg-black/50
+
+    // Анимация через transition (плавное изменение opacity)
+    transition-property: opacity;
+    transition-duration: 150ms;          // длительность анимации
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); // easing (как в Tailwind по умолчанию)
+    // Для производительности можно добавить:
+    // will-change: opacity;
+
+    // Состояние "открыто" — элемент полностью видим
+    &[data-state="open"] {
+        opacity: 1;
+    }
+
+    // Состояние "закрыто" — элемент прозрачный
+    &[data-state="closed"] {
+        opacity: 0;
+    }
+}
+
+.drawer__content {
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: #1e1e1e; // или любой другой цвет фона
+
+    &[data-vaul-drawer-direction="top"] {
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-bottom: 6rem; // 24 * 0.25rem = 6rem (Tailwind spacing)
+        max-height: 80vh;
+    }
+
+    &[data-vaul-drawer-direction="bottom"] {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 6rem;
+        max-height: 80vh;
+    }
+
+    &[data-vaul-drawer-direction="right"] {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        //width: 75%;
+
+        @include minWidthMedia(640) {
+            max-width: 24rem; // 24rem = 384px
+        }
+    }
+
+    &[data-vaul-drawer-direction="left"] {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        //width: 75%;
+
+        @include minWidthMedia(640) {
+            max-width: 24rem; // 24rem = 384px
+        }
+    }
+}

@@ -132,6 +132,7 @@
   --purple-rgb: 120, 40, 255;
   --red-rgb: 221, 57, 57;
   --blue-rgb: 0, 125, 254;
+  --pale-blue: 77, 89, 250;
   --skylight-blue-rgb: 54, 54, 225;
   --telegram-rgb: 0, 174, 237;
   --discord-rgb: 88, 101, 242;
@@ -530,7 +531,7 @@ button {
 
 .skills-section__title {
   margin-bottom: 1.5625rem;
-  font-size: clamp(2.25rem, 2.145rem + 0.56vw, 2.6875rem);
+  font-size: clamp(2rem, 1.835rem + 0.88vw, 2.6875rem);
 }
 
 .skills-section__list {
@@ -546,7 +547,7 @@ button {
 
 .services-section__title {
   margin-bottom: 1.25rem;
-  font-size: clamp(2.25rem, 2.145rem + 0.56vw, 2.6875rem);
+  font-size: clamp(2rem, 1.835rem + 0.88vw, 2.6875rem);
 }
 
 .services-section__description {
@@ -578,7 +579,7 @@ button {
 
 .projects-section__title {
   margin-bottom: 1.25rem;
-  font-size: clamp(2.25rem, 2.145rem + 0.56vw, 2.6875rem);
+  font-size: clamp(2rem, 1.835rem + 0.88vw, 2.6875rem);
 }
 
 .projects-section__tabs {
@@ -679,12 +680,26 @@ button {
 }
 
 .burger-menu {
-  width: 250px;
-  min-width: 235px;
+  width: 275px;
   height: calc(100dvh - 16px);
   margin-top: 8px;
   margin-right: 8px;
   margin-bottom: 8px;
+  background-color: #1e1e1e;
+  border: 2px solid #5b5b5b;
+  border-radius: var(--border-20);
+}
+.burger-menu:after {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 .burger-menu__list {
@@ -695,6 +710,7 @@ button {
 
 .burger-menu__title {
   margin-bottom: 1.5625rem;
+  font-size: clamp(1.5625rem, 1.4875rem + 0.4vw, 1.875rem);
 }
 
 .burger-menu__button {
@@ -703,6 +719,12 @@ button {
   padding: 8px 0;
   gap: 8px;
   font-size: clamp(1.0625rem, 1.0475rem + 0.08vw, 1.125rem);
+}
+
+.burger-menu__close-button {
+  padding: 0.375em;
+  margin-top: auto;
+  font-size: clamp(0.9375rem, 0.9075rem + 0.16vw, 1.0625rem);
 }
 
 .title {
@@ -932,9 +954,9 @@ button {
   font-weight: 600;
   padding: 0.2352941176em 0.7647058824em;
   border-radius: var(--border-circle);
-  background-color: rgba(77, 89, 250, 0.15);
-  color: rgb(77, 89, 250);
-  filter: drop-shadow(0px 2px 5px #000);
+  background-color: rgba(var(--pale-blue), 0.15);
+  color: rgb(var(--pale-blue));
+  filter: drop-shadow(0px 2px 5px #000000);
   font-size: clamp(0.9375rem, 0.9225rem + 0.08vw, 1rem);
 }
 
@@ -956,7 +978,7 @@ button {
 }
 
 .tabs__trigger {
-  padding: 0.3333333333em 1em;
+  padding: 0.3333333333em 1.2em;
   border-radius: 0;
   transition: background-color var(--transition-time);
   font-size: clamp(0.875rem, 0.845rem + 0.16vw, 1rem);
@@ -977,6 +999,65 @@ button {
 }
 .tabs__trigger[data-state=active] {
   background-color: #2d2d2d;
+}
+
+.drawer__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.drawer__overlay[data-state=open] {
+  opacity: 1;
+}
+.drawer__overlay[data-state=closed] {
+  opacity: 0;
+}
+
+.drawer__content {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: #1e1e1e;
+}
+.drawer__content[data-vaul-drawer-direction=top] {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-bottom: 6rem;
+  max-height: 80vh;
+}
+.drawer__content[data-vaul-drawer-direction=bottom] {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 6rem;
+  max-height: 80vh;
+}
+.drawer__content[data-vaul-drawer-direction=right] {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 640px) {
+  .drawer__content[data-vaul-drawer-direction=right] {
+    max-width: 24rem;
+  }
+}
+.drawer__content[data-vaul-drawer-direction=left] {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 640px) {
+  .drawer__content[data-vaul-drawer-direction=left] {
+    max-width: 24rem;
+  }
 }
 
 .glass {
@@ -1033,6 +1114,9 @@ button {
   gap: 7px;
   align-items: center;
 }
+.project-card__stack-list .project-card__list-point {
+  display: inline-flex;
+}
 
 .project-card__skill {
   display: inline-flex;
@@ -1058,7 +1142,7 @@ button {
 }
 
 .project-card__button-hover-content-popup {
-  padding: 0.4285714286em;
+  padding: 0.3571428571em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

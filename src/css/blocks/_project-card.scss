@@ -33,6 +33,10 @@
     flex-direction: row;
     gap: 7px;
     align-items: center;
+
+    & .project-card__list-point {
+        display: inline-flex;
+    }
 }
 
 .project-card__skill {
@@ -62,7 +66,7 @@
 }
 
 .project-card__button-hover-content-popup {
-    padding: toem(14, 6);
+    padding: toem(14, 5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

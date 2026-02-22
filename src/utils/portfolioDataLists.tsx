@@ -11,7 +11,7 @@ import {JavaScriptIcon} from "@/components/icons/technology/JavaScriptIcon.tsx";
 import {TypeScriptIcon} from "@/components/icons/technology/TypeScriptIcon.tsx";
 import {NextIcon} from "@/components/icons/technology/NextIcon.tsx";
 import {ReactIcon} from "@/components/icons/technology/ReactIcon.tsx";
-import {GitIcon} from "@/components/icons/GitIcon.tsx";
+import {GitIcon} from "@/components/icons/technology/GitIcon.tsx";
 import {GitHubIcon} from "@/components/icons/GitHubIcon.tsx";
 import {DockerIcon} from "@/components/icons/technology/DockerIcon.tsx";
 import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
@@ -163,28 +163,28 @@ export const services: ServiceData[] = [
     {
         title: "Telegram бот",
         colorName: "telegram",
-        price: 3500,
+        price: 2500,
         icon: <TelegramIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus.",
     },
     {
         title: "Вёрстка",
         colorName: "purple",
-        price: 2500,
+        price: 3000,
         icon: <RulerIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!",
     },
     {
         title: "Сайт / TG mini app",
         colorName: "red",
-        price: 5000,
+        price: 3500,
         icon: <InternetIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     {
         title: "Discord бот",
         colorName: "discord",
-        price: 3500,
+        price: 2500,
         icon: <DiscordIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga.",
     },
@@ -241,15 +241,15 @@ export const projects: ProjectData[] = [
                 name: "setuptools",
                 id: "setuptools",
                 useDefaultStyle: true
-            }
+            },
         ],
         buttons: [
             {
                 text: "GitHub",
                 href: "https://github.com/SuperFeda/aioheleket",
                 icon: <GitHubIcon width={16} height={16} iconColor={DEFAULT_ICON_COLOR}/>
-            }
-        ]
+            },
+        ],
     },
     {
         type: "bot",
@@ -323,7 +323,7 @@ export const projects: ProjectData[] = [
         type: "website",
         title: "SF's Site",
         description: "Мой сайт-портфолио.",
-        bgImageURL: "./../img/sfs_site.png",
+        bgImageURL: "./img/sfs_site.png",
         baseStack: [
             {
                 name: "React",
@@ -367,6 +367,6 @@ export const projects: ProjectData[] = [
                 href: "https://github.com/SuperFeda/aioheleket",
                 icon: <GitHubIcon width={16} height={16} iconColor={DEFAULT_ICON_COLOR}/>
             },
-        ]
+        ],
     },
 ]

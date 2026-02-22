@@ -1,12 +1,19 @@
 .burger-menu {
     $offset: 8px;
 
-    width: 250px;
-    min-width: 235px;
+    width: 275px;
     height: calc(100dvh - ($offset*2));
     margin-top: $offset;
     margin-right: $offset;
     margin-bottom: $offset;
+
+    background-color: #1e1e1e;
+    border: 2px solid #5b5b5b;
+    border-radius: var(--border-20);
+
+    &:after {
+        @include noDisplay;
+    }
 }
 
 .burger-menu__list {
@@ -17,6 +24,8 @@
 
 .burger-menu__title {
     margin-bottom: torem(25);
+
+    @include adaptFontSize(25, 30);
 }
 
 .burger-menu__list-point {
@@ -30,4 +39,11 @@
     gap: 8px;
 
     @include adaptFontSize(17, 18);
+}
+
+.burger-menu__close-button {
+    padding: toem(16, 6);
+    margin-top: auto;
+
+    @include adaptFontSize(15, 17);
 }

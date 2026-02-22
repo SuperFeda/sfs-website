@@ -17,7 +17,7 @@ export function ProjectCard({children, bgImageURL, className = "", titleText, de
             className={`project-card ${className}`}
             style={bgImageURL ? {
                 background: `url('${bgImageURL}') center/cover no-repeat`,
-                backgroundColor: "rgba(9,9,9,0.8)",
+                backgroundColor: "rgba(3,3,3,0.8)",
                 backgroundBlendMode: "multiply",
             }: {}}
         >
