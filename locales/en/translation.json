@@ -1,0 +1,181 @@
+{
+    "button": {
+        "header": {
+            "change_language": {
+                "hover_text": "Switch language"
+            },
+            "burger_menu": {
+                "hover_text": "Open page navigation menu"
+            }
+        }
+    },
+    "link": {
+        "header": {
+            "about": {
+                "text": "About me",
+                "hover_text": "Information about me"
+            },
+            "skills": {
+                "text": "My skills",
+                "hover_text": "Information about my skills"
+            },
+            "projects": {
+                "text": "Projects",
+                "hover_text": "Information about my projects"
+            },
+            "services": {
+                "text": "Services",
+                "hover_text": "Information about services"
+            }
+        },
+        "about_section": {
+            "telegram": {
+                "text": "My Telegram",
+                "hover_text": "Link to my Telegram"
+            },
+            "github": {
+                "text": "GitHub",
+                "hover_text": "Link to my GitHub"
+            },
+            "modrinth": {
+                "text": "Modrinth",
+                "hover_text": "Link to my Modrinth"
+            }
+        }
+    },
+    "title": {
+        "header": {
+            "text": "SυρεrFeδα",
+            "hover_text": "SuperFeda"
+        },
+        "footer": {
+            "text": "Made by SuperFeda with React, SCSS and BEM."
+        },
+        "about_section": {
+            "text": "I'm SuperFeda<0/><1>full-stack</1> developer"
+        },
+        "skills_section": {
+            "text": "My skills"
+        },
+        "projects_section": {
+            "text": "My projects"
+        },
+        "service_section": {
+            "text": "Services"
+        },
+        "skillcard": {
+            "backend": {
+                "text": "Backend"
+            },
+            "frontend": {
+                "text": "Frontend"
+            },
+            "cicd": {
+                "text": "CI/CD, environment"
+            }
+        }
+    },
+    "p": {
+        "footer": {
+            "text": "Copyright © 2026 SuperFeda. All rights reserved. Copying and editing is not allowed."
+        },
+        "about_section": {
+            "text": "I am a <0>full-stack</0> developer, specializing in creating reliable web platforms and bots. On the backend, I use <1>Python</1>, <2>FastAPI</2>, and <3>Pydantic</3> to build efficient APIs. I develop the frontend with <4>TypeScript</4>, <5>React</5>, and Next.js, styling with <6>SCSS</6> and the <7>BEM methodology</7>. I also create bots for <8>Telegram</8> and <9>Discord</9>."
+        },
+        "services_section": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!"
+        }
+    },
+    "tabs": {
+        "trigger": {
+            "all_projects": {
+                "text": "All projects",
+                "hover_text": "View all projects"
+            },
+            "sites": {
+                "text": "Websites",
+                "hover_text": "Switch to website projects"
+            },
+            "bots": {
+                "text": "Bots",
+                "hover_text": "Switch to bot projects"
+            },
+            "other": {
+                "text": "Other",
+                "hover_text": "Switch to other projects"
+            }
+        }
+    },
+    "project_card": {
+        "aioheleket": {
+            "title": {
+                "text": "aioheleket"
+            },
+            "description": {
+                "text": "Asynchronous Python library for the Heleket crypto payment API."
+            }
+        },
+        "star_channel": {
+            "title": {
+                "text": "StarChannel"
+            },
+            "description": {
+                "text": "Telegram bot for purchasing temporary subscriptions to Telegram channels using stars and cryptocurrency."
+            }
+        },
+        "skylightservices_bot": {
+            "title": {
+                "text": "SkylightServices Bot"
+            },
+            "description": {
+                "text": "Discord bot for processing orders on the server."
+            }
+        },
+        "sfs_site": {
+            "title": {
+                "text": "SF's Site"
+            },
+            "description": {
+                "text": "My portfolio website."
+            }
+        }
+    },
+    "service": {
+        "telegram_bot": {
+            "title": {
+                "text": "Telegram bot"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod."
+            }
+        },
+        "site_design": {
+            "title": {
+                "text": "Layout / HTML/CSS"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus."
+            }
+        },
+        "site": {
+            "title": {
+                "text": "Website \\ TG mini app"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga."
+            }
+        },
+        "discord_bot": {
+            "title": {
+                "text": "Discord bot"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }
+        },
+        "price": {
+            "text": "from {{ price }} ₽",
+            "hover_text": "Price of the service \"{{ service_name }}\" starts from {{ price }} ₽"
+        }
+    }
+}
