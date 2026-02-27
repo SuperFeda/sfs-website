@@ -18,7 +18,7 @@ import {FolderIcon} from "@/components/icons/FolderIcon.tsx";
 import {DrawingCompassIcon} from "@/components/icons/DrawingCompassIcon.tsx";
 import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
 import {DiscordIcon} from "@/components/icons/DiscordIcon.tsx";
-import {RulerIcon} from "@/components/RulerIcon.tsx";
+import {RulerIcon} from "@/components/icons/RulerIcon.tsx";
 import {InternetIcon} from "@/components/icons/InternetIcon.tsx";
 
 export const backendSkills: SkillData[] = [
@@ -161,68 +161,68 @@ export const CICDSkills: SkillData[] = [
 
 export const services: ServiceData[] = [
     {
-        title: "Telegram бот",
+        title: "service.telegram_bot.title.text",
         colorName: "telegram",
         price: 2500,
         icon: <TelegramIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus.",
+        description: "service.telegram_bot.description.text",
     },
     {
-        title: "Вёрстка",
+        title: "service.site_design.title.text",
         colorName: "purple",
         price: 3000,
         icon: <RulerIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!",
+        description: "service.site_design.description.text",
     },
     {
-        title: "Сайт / TG mini app",
+        title: "service.site.title.text",
         colorName: "red",
         price: 3500,
         icon: <InternetIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        description: "service.site.description.text",
     },
     {
-        title: "Discord бот",
+        title: "service.discord_bot.title.text",
         colorName: "discord",
         price: 2500,
         icon: <DiscordIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga.",
+        description: "service.discord_bot.description.text",
     },
 ]
 
 export const headerLinks = [
     {
-        text: "Обо мне",
+        text: "link.header.about.text",
         icon: <GitHubIcon height={"auto"} width={"1.5em"} iconColor={"currentColor"} />,
         link: `#${CHAPTERS.WHO_I_AM}`,
-        title: "Информация обо мне"
+        title: "link.header.about.hover_text"
     },
     {
-        text: "Мои навыки",
+        text: "link.header.skills.text",
         icon: <DrawingCompassIcon height={"auto"} width={"1.5em"} iconColor={"currentColor"} />,
         link: `#${CHAPTERS.SKILLS}`,
-        title: "Информация о моих навыках"
+        title: "link.header.skills.hover_text"
     },
     {
-        text: "Проекты",
+        text: "link.header.projects.text",
         icon: <FolderIcon height={"auto"} width={"1.5em"} iconColor={"currentColor"} />,
         link: `#${CHAPTERS.PROJECTS}`,
-        title: "Информация о моих проектах"
+        title: "link.header.projects.hover_text"
     },
     {
-        text: "Услуги",
+        text: "link.header.services.text",
         icon: <CodeIcon height={"auto"} width={"1.5em"} iconColor={"currentColor"} />,
         link: `#${CHAPTERS.SERVICES}`,
-        title: "Информация об услугах"
+        title: "link.header.services.hover_text"
     },
 ]
 
 export const projects: ProjectData[] = [
     {
         type: "other",
-        title: "aioheleket",
+        title: "project_card.aioheleket.title.text",
+        description: "project_card.aioheleket.description.text",
         bgImageURL: "https://heleket.com/_next/image?url=%2Fimg%2Fmain-page%2Ffirst-block%2Fmain-background.webp&w=1920&q=75",
-        description: "Асинхронная Python библиотека для API криптоплатежей Heleket.",
         baseStack: [
             {
                 name: "aiohttp",
@@ -253,8 +253,8 @@ export const projects: ProjectData[] = [
     },
     {
         type: "bot",
-        title: "StarChannel",
-        description: "Telegram бот для покупки временной подписки в ТГ канал за звёзды и криптовалюту.",
+        title: "project_card.star_channel.title.text",
+        description: "project_card.star_channel.description.text",
         baseStack: [
             {
                 name: "Python",
@@ -293,8 +293,8 @@ export const projects: ProjectData[] = [
     },
     {
         type: "bot",
-        title: "SkylightServices Bot",
-        description: "Discord бот для обработки заказов на сервере.",
+        title: "project_card.skylightservices_bot.title.text",
+        description: "project_card.skylightservices_bot.description.text",
         baseStack: [
             {
                 name: "Python",
@@ -321,8 +321,8 @@ export const projects: ProjectData[] = [
     },
     {
         type: "website",
-        title: "SF's Site",
-        description: "Мой сайт-портфолио.",
+        title: "project_card.sfs_site.title.text",
+        description: "project_card.sfs_site.description.text",
         bgImageURL: "./img/sfs_site.png",
         baseStack: [
             {
@@ -351,6 +351,11 @@ export const projects: ProjectData[] = [
             {
                 name: "Zustand",
                 id: "zustand",
+                useDefaultStyle: true,
+            },
+            {
+                name: "i18next",
+                id: "i18next",
                 useDefaultStyle: true,
             },
         ],

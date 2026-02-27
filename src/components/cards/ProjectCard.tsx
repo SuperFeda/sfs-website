@@ -3,6 +3,7 @@ import React, {type AnchorHTMLAttributes, type ReactNode} from "react";
 import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card.tsx";
 import type {SkillData} from "@/utils/types.ts";
 import {Skill} from "@/components/Skill.tsx";
+import {useTranslation} from "react-i18next";
 
 interface ProjectCardProps {
     titleText: string
@@ -12,6 +13,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({children, bgImageURL, className = "", titleText, description}: React.PropsWithChildren<ProjectCardProps>) {
+    const {t} = useTranslation()
+
     return (
         <div
             className={`project-card ${className}`}
@@ -22,8 +25,8 @@ export function ProjectCard({children, bgImageURL, className = "", titleText, de
             }: {}}
         >
             <div className={"project-card__content"}>
-                <h3 className={"project-card__title title"}>{titleText}</h3>
-                <p className={"project-card__description"}>{description}</p>
+                <h3 className={"project-card__title title"}>{t(titleText)}</h3>
+                <p className={"project-card__description"}>{t(description)}</p>
                 {children}
             </div>
         </div>

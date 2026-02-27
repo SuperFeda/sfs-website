@@ -13,8 +13,8 @@ export const PROJECT_TABS = {
     OTHER: "other"
 }
 
-export const H2_ICON_SIZE: number = 36
-export const H3_ICON_SIZE: number = 28
+export const H2_ICON_SIZE: number = 32
+export const H3_ICON_SIZE: number = 24
 
 export const SKILL_ICON_SIZE: number = 20
 export const DEFAULT_ICON_COLOR: string = "currentColor"

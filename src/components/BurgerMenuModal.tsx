@@ -1,6 +1,7 @@
 import {headerLinks} from "@/utils/portfolioDataLists.tsx";
 import {Drawer, DrawerContent} from "@/components/ui/drawer.tsx";
 import {useBurgerMenuStore} from "@/stores/useBurgerMenuStore.ts";
+import {useTranslation} from "react-i18next";
 
 interface BurgerMenuModalProps {
     className?: string
@@ -8,11 +9,17 @@ interface BurgerMenuModalProps {
 
 export function BurgerMenuModal({className=""}: BurgerMenuModalProps) {
     const {setIsMenuOpen, isMenuOpen} = useBurgerMenuStore();
+    const {t} = useTranslation()
 
     return (
         <Drawer direction={"right"} onOpenChange={setIsMenuOpen} open={isMenuOpen}>
             <DrawerContent className={`burger-menu ${className}`}>
-                <h2 className={"burger-menu__title title"}>SυρεrFeδα</h2>
+                <h2
+                    className={"burger-menu__title title"}
+                    title={t("title.header.hover_text")}
+                >
+                    {t("title.header.text")}
+                </h2>
                 <ul className={"burger-menu__list"}>
                     {
                         headerLinks.map((linkData, i: number) => (
@@ -20,22 +27,16 @@ export function BurgerMenuModal({className=""}: BurgerMenuModalProps) {
                                 <a
                                     className={"burger-menu__button button button--no-border"}
                                     href={linkData.link}
-                                    title={linkData.title}
+                                    title={t(linkData.title)}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {linkData.icon}
-                                    <span>{linkData.text}</span>
+                                    <span>{t(linkData.text)}</span>
                                 </a>
                             </li>
                         ))
                     }
                 </ul>
-                <button
-                    className={"button burger-menu__close-button"}
-                    onClick={() => setIsMenuOpen(false)}
-                >
-                    Закрыть
-                </button>
             </DrawerContent>
         </Drawer>
     )

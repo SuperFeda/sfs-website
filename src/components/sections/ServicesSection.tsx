@@ -1,12 +1,8 @@
 import React from "react";
 
-interface ServicesSectionProps extends React.PropsWithChildren {
-    id?: string
-}
-
-export function ServicesSection({children, id = ""}: ServicesSectionProps) {
+export function ServicesSection({children, id = "", ...props}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>) {
     return (
-        <section className={"services-section"} id={id}>
+        <section className={"services-section"} id={id} {...props}>
             {children}
         </section>
     )

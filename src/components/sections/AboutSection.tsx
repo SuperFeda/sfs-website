@@ -1,12 +1,8 @@
 import React from "react";
 
-interface AboutSectionProps extends React.PropsWithChildren {
-    id?: string
-}
-
-export function AboutSection({children, id = ""}: AboutSectionProps) {
+export function AboutSection({children, id = "", ...props}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>) {
     return (
-        <section className={"about-section"} id={id}>
+        <section className={"about-section"} id={id} {...props}>
             {children}
         </section>
     )

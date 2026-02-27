@@ -1,12 +1,8 @@
 import React from "react";
 
-interface SkillsSectionProps extends React.PropsWithChildren {
-    id?: string
-}
-
-export function SkillsSection({children, id = ""}: SkillsSectionProps) {
+export function SkillsSection({children, id = "", ...props}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>) {
     return (
-        <section className={"skills-section"} id={id}>
+        <section className={"skills-section"} id={id} {...props}>
             {children}
         </section>
     )

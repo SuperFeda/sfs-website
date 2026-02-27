@@ -3,6 +3,8 @@ import {createRoot} from "react-dom/client"
 
 import {MainPage} from "@/pages/MainPage.tsx"
 
+import "./i18n.ts"
+
 import "@/css/style.css"
 import "@/css/index.css"
 

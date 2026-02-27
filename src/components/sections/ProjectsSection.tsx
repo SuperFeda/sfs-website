@@ -1,12 +1,8 @@
 import React from "react";
 
-interface ProjectsSectionProps extends React.PropsWithChildren {
-    id?: string
-}
-
-export function ProjectsSection({children, id = ""}: ProjectsSectionProps) {
+export function ProjectsSection({children, id = "", ...props}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>) {
     return (
-        <section className={"projects-section"} id={id}>
+        <section className={"projects-section"} id={id} {...props}>
             {children}
         </section>
     )
