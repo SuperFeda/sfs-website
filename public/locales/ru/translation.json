@@ -1,0 +1,181 @@
+{
+    "button": {
+        "header": {
+            "change_language": {
+                "hover_text": "Переключить язык"
+            },
+            "burger_menu": {
+                "hover_text": "Вызвать меню для навигации по странице"
+            }
+        }
+    },
+    "link": {
+        "header": {
+            "about": {
+                "text": "Обо мне",
+                "hover_text": "Информация обо мне"
+            },
+            "skills": {
+                "text": "Мои навыки",
+                "hover_text": "Информация о моих навыках"
+            },
+            "projects": {
+                "text": "Проекты",
+                "hover_text": "Информация о моих проектах"
+            },
+            "services": {
+                "text": "Услуги",
+                "hover_text": "Информация об услугах"
+            }
+        },
+        "about_section": {
+            "telegram": {
+                "text": "Мой Telegram",
+                "hover_text": "Ссылка на мой Telegram"
+            },
+            "github": {
+                "text": "GitHub",
+                "hover_text": "Ссылка на мой GitHub"
+            },
+            "modrinth": {
+                "text": "Modrinth",
+                "hover_text": "Ссылка на мой Modrinth"
+            }
+        }
+    },
+    "title": {
+        "header": {
+            "text": "SυρεrFeδα",
+            "hover_text": "SuperFeda"
+        },
+        "footer": {
+            "text": "Made by SυρεrFeδα with React, SCSS und BEM."
+        },
+        "about_section": {
+            "text": "Im SuperFeda<0/><1>Full-stack</1> разработчик"
+        },
+        "skills_section": {
+            "text": "Мои навыки"
+        },
+        "projects_section": {
+            "text": "Мои проекты"
+        },
+        "service_section": {
+            "text": "Услуги"
+        },
+        "skillcard": {
+            "backend": {
+                "text": "Backend"
+            },
+            "frontend": {
+                "text": "Frontend"
+            },
+            "cicd": {
+                "text": "CI/CD, окружение"
+            }
+        }
+    },
+    "p": {
+        "footer": {
+            "text": "Copyright © 2026 SuperFeda. Все права защищены. Копирование и редактирование не допускается."
+        },
+        "about_section": {
+            "text": "Я <0>full-stack</0> разработчик, специализируюсь на создании надёжных веб-платформ и ботов. На бэкенде использую <1>Python</1>, <2>FastAPI</2> и <3>Pydantic</3> для построения эффективных API. Фронтенд разрабатываю на <4>TypeScript</4>, <5>React</5> и Next.js, верстаю с использованием <6>SCSS</6> вместе с <7>БЭМ методологией</7>. Также создаю ботов для <8>Telegram</8> и <9>Discord</9>."
+        },
+        "services_section": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!"
+        }
+    },
+    "tabs": {
+        "trigger": {
+            "all_projects": {
+                "text": "Все работы",
+                "hover_text": "Посмотреть все работы"
+            },
+            "sites": {
+                "text": "Сайты",
+                "hover_text": "Переключить на работы с сайтами"
+            },
+            "bots": {
+                "text": "Боты",
+                "hover_text": "Переключить на работы с ботами"
+            },
+            "other": {
+                "text": "Другие",
+                "hover_text": "Переключить на остальные работы"
+            }
+        }
+    },
+    "project_card": {
+        "aioheleket": {
+            "title": {
+                "text": "aioheleket"
+            },
+            "description": {
+                "text": "Асинхронная Python библиотека для API криптоплатежей Heleket."
+            }
+        },
+        "star_channel": {
+            "title": {
+                "text": "StarChannel"
+            },
+            "description": {
+                "text": "Telegram бот для покупки временной подписки в ТГ канал за звёзды и криптовалюту."
+            }
+        },
+        "skylightservices_bot": {
+            "title": {
+                "text": "SkylightServices Bot"
+            },
+            "description": {
+                "text": "Discord бот для обработки заказов на сервере."
+            }
+        },
+        "sfs_site": {
+            "title": {
+                "text": "SF's Site"
+            },
+            "description": {
+                "text": "Мой сайт-портфолио."
+            }
+        }
+    },
+    "service": {
+        "telegram_bot": {
+            "title": {
+                "text": "Telegram бот"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod."
+            }
+        },
+        "site_design": {
+            "title": {
+                "text": "Вёрстка"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus."
+            }
+        },
+        "site": {
+            "title": {
+                "text": "Сайт \\ TG mini app"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga."
+            }
+        },
+        "discord_bot": {
+            "title": {
+                "text": "Discord бот"
+            },
+            "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }
+        },
+        "price": {
+            "text": "от {{ price }} ₽",
+            "hover_text": "Цена услуги \"{{ service_name }}\" начинается от {{ price }} ₽"
+        }
+    }
+}
