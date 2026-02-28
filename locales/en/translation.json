@@ -103,6 +103,14 @@
             "other": {
                 "text": "Other",
                 "hover_text": "Switch to other projects"
+            },
+            "usd": {
+                "text": "USD",
+                "hover_text": "Switch to USD currency"
+            },
+            "rub": {
+                "text": "RUB",
+                "hover_text": "Switch to RUB currency"
             }
         }
     },
@@ -174,8 +182,11 @@
             }
         },
         "price": {
-            "text": "from {{ price }} ₽",
-            "hover_text": "Price of the service \"{{ service_name }}\" starts from {{ price }} ₽"
+            "text": {
+                "right_symbol": "from {{ price }}{{ symbol }}",
+                "left_symbol": "from {{ symbol }}{{ price }}"
+            },
+            "hover_text": "Price of the service \"{{ service_name }}\" starts from {{ price }} {{ symbol }}"
         }
     }
 }
