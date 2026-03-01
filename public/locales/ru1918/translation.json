@@ -103,6 +103,14 @@
             "other": {
                 "text": "Другіе",
                 "hover_text": "Переключить на остальныя работы"
+            },
+            "usd": {
+                "text": "USD",
+                "hover_text": "Переключить валюту на USD"
+            },
+            "rub": {
+                "text": "RUB",
+                "hover_text": "Переключить валюту на RUB"
             }
         }
     },
@@ -174,8 +182,11 @@
             }
         },
         "price": {
-            "text": "от {{ price }} ₽",
-            "hover_text": "Цѣна услуги \"{{ service_name }}\" начинается от {{ price }} ₽"
+            "text": {
+                "right_symbol": "от {{ price }}{{ symbol }}",
+                "left_symbol": "от {{ symbol }}{{ price }}"
+            },
+            "hover_text": "Цѣна услуги \"{{ service_name }}\" начинается от {{ price }} {{ symbol }}"
         }
     }
 }
