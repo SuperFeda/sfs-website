@@ -1,15 +1,16 @@
 import React, {type ReactNode} from "react";
+import {useTranslation} from "react-i18next";
 
 import {TitleWithIcon} from "@/components/TitleWithIcon.tsx";
 import {formatPrice} from "@/utils/utils.ts";
 import {SpotlightCard} from "@/components/cards/SpotlightCard.tsx";
-import {useTranslation} from "react-i18next";
+import {CURRENCIES, type Currency, type Price} from "@/utils/types.ts";
 
 
 interface ServiceCardProps extends React.PropsWithChildren {
     icon: ReactNode,
     titleText: string
-    price: number
+    price: Price
     color: string
     description: string
     className?: string
@@ -18,6 +19,9 @@ interface ServiceCardProps extends React.PropsWithChildren {
 
 export function ServiceCard({className = "", price, description, icon, color, titleText, titleClassName}: ServiceCardProps) {
     const {t} = useTranslation()
+
+    const formattedPriceAmount: string = formatPrice(price.amount)
+    const currency: Currency = CURRENCIES[price.type]
 
     return (
         <SpotlightCard className={`service-card ${className}`} spotlightColor={color}>
@@ -30,9 +34,19 @@ export function ServiceCard({className = "", price, description, icon, color, ti
                 />
                 <span
                     className={"service-card__price"}
-                    title={t("service.price.hover_text", {price: formatPrice(price), service_name: titleText})}
+                    title={t("service.price.hover_text",
+                        {
+                            price: formattedPriceAmount,
+                            symbol: currency.symbol,
+                            service_name: titleText
+                        })}
                 >
-                    {t("service.price.text", {price: formatPrice(price)})}
+                    {t(`service.price.text.${currency.currencyPos}_symbol`,
+                        {
+                            price: formattedPriceAmount,
+                            symbol: currency.symbol
+                        })
+                    }
                 </span>
             </div>
             <p className={"service-card__description"}>{description}</p>

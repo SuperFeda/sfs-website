@@ -16,14 +16,14 @@
 .skill-card__technology-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .skills-card__skill {
-    padding: toem(16, 5) toem(16, 15);
+    padding: toem(14, 5) toem(14, 16);
 
-    @include adaptFontSize(14, 16);
+    @include adaptFontSize(13, 14);
     @include tablet() {
-        padding: toem(15, 4) toem(15, 10);
+        padding: toem(14, 4) toem(14, 10);
     }
 }

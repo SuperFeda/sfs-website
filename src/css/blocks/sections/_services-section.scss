@@ -7,7 +7,7 @@ $bottom-offset: 20;
 .services-section__title {
     margin-bottom: torem($bottom-offset);
 
-    @include adaptFontSize(32, 43);
+    @include adaptFontSize(32, 40);
 }
 
 .services-section__description {
@@ -21,6 +21,10 @@ $bottom-offset: 20;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 25px;
+
+    &[data-state="inactive"] {
+        @include noDisplay();
+    }
 
     @include tablet() {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

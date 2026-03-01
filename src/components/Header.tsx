@@ -1,7 +1,7 @@
 import {BurgerMenuIcon} from "@/components/icons/BurgerMenuIcon.tsx";
 import {LanguageIcon} from "@/components/icons/LanguageIcon.tsx";
 import {useBurgerMenuStore} from "@/stores/useBurgerMenuStore.ts";
-import {headerLinks} from "@/utils/portfolioDataLists.tsx";
+import {headerLinks, languages} from "@/utils/portfolioDataLists.tsx";
 import {useTranslation} from "react-i18next";
 import {
     DropdownMenu,
@@ -50,9 +50,15 @@ export function Header() {
                                     </button>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent side={"bottom"}>
-                                    <DropdownMenuItem onClick={() => i18n.changeLanguage("ru")}>Русский</DropdownMenuItem>
-                                    <DropdownMenuItem onClick={() => i18n.changeLanguage("en")}>English</DropdownMenuItem>
-                                    <DropdownMenuItem onClick={() => i18n.changeLanguage("ru1918")}>Русскій языкъ</DropdownMenuItem>
+                                    {
+                                        languages.map((lang) => (
+                                            <DropdownMenuItem
+                                                onClick={() => i18n.changeLanguage(lang.id)}
+                                            >
+                                                {lang.name}
+                                            </DropdownMenuItem>
+                                        ))
+                                    }
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         </li>

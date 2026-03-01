@@ -49,6 +49,10 @@
         @include iconColor(rgb(var(--blue-rgb)), rgba(var(--blue-rgb), 0.15))
     }
 
+    &--green-icon svg {
+        @include iconColor(rgb(var(--green-rgb)), rgba(var(--green-rgb), 0.15))
+    }
+
     &--telegram-icon svg {
         @include iconColor(rgb(var(--telegram-rgb)), rgba(var(--telegram-rgb), 0.15))
     }

@@ -1,5 +1,5 @@
 .glass {
-    border: 1px solid rgba(40, 40, 40, 1);
+    border: 1px solid #282828;
     border-radius: var(--border-circle);
 
     @include backdropBlur(10px, rgba(40, 40, 40, 0.3));

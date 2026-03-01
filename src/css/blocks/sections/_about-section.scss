@@ -3,12 +3,12 @@
 
 .about-section__inner {
     text-align: center;
-    margin-inline: 5%;
+    margin-inline: 15%;
     padding-block: torem(170);
 
     @include tablet() {
         padding-block: torem(50);
-        margin-inline: 2%;
+        margin-inline: 0;
     }
 }
 
@@ -18,11 +18,11 @@ $offset: 2.5;
     margin-bottom: #{$offset}rem;
     line-height: 1;
 
-    @include adaptFontSize(35, 60);
+    @include adaptFontSize(40, 60);
 }
 
 .about-section__description {
-    @include adaptFontSize(16, 19);
+    @include adaptFontSize(15, 19);
 }
 
 .about-section__span {

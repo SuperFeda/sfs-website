@@ -33,14 +33,14 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: #1e1e1e; // или любой другой цвет фона
+    background-color: #141414;
 
     &[data-vaul-drawer-direction="top"] {
         left: 0;
         right: 0;
         top: 0;
-        margin-bottom: 6rem; // 24 * 0.25rem = 6rem (Tailwind spacing)
-        max-height: 80vh;
+        margin-bottom: 6rem;
+        max-height: 80dvh;
     }
 
     &[data-vaul-drawer-direction="bottom"] {
@@ -48,7 +48,7 @@
         right: 0;
         bottom: 0;
         margin-top: 6rem;
-        max-height: 80vh;
+        max-height: 80dvh;
     }
 
     &[data-vaul-drawer-direction="right"] {

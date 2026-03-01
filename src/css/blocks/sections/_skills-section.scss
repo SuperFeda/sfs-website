@@ -5,7 +5,7 @@
 .skills-section__title {
     margin-bottom: torem(25);
 
-    @include adaptFontSize(32, 43);
+    @include adaptFontSize(32, 40);
 }
 
 .skills-section__list {
@@ -13,6 +13,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: torem(50);
+}
+
+.services-section__point {
+    list-style: none;
 }
 
 .skills-section__skill-card {

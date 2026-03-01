@@ -1,9 +1,10 @@
 import React, {type AnchorHTMLAttributes, type ReactNode} from "react";
 
 import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card.tsx";
-import type {SkillData} from "@/utils/types.ts";
-import {Skill} from "@/components/Skill.tsx";
+import type {TechnologyVariant} from "@/utils/types.ts";
 import {useTranslation} from "react-i18next";
+import {TechnologyTemp} from "@/components/TechnologyTemp.tsx";
+import {SKILL_ICON_SIZE} from "@/utils/const.ts";
 
 interface ProjectCardProps {
     titleText: string
@@ -25,9 +26,13 @@ export function ProjectCard({children, bgImageURL, className = "", titleText, de
             }: {}}
         >
             <div className={"project-card__content"}>
-                <h3 className={"project-card__title title"}>{t(titleText)}</h3>
-                <p className={"project-card__description"}>{t(description)}</p>
-                {children}
+                <div className={"project-card__top"}>
+                    <h3 className={"project-card__title title"}>{t(titleText)}</h3>
+                    <p className={"project-card__description"}>{t(description)}</p>
+                </div>
+                <div className={"project-card__bottom"}>
+                    {children}
+                </div>
             </div>
         </div>
     )
@@ -37,10 +42,9 @@ interface ProjectCardAnchorProps extends AnchorHTMLAttributes<never> { icon?: Re
 export function ProjectCardAnchor({children, icon, className = "", ...props}: React.PropsWithChildren<ProjectCardAnchorProps>) {
     return (
         <li className={"project-card__button-list-point"}>
-            {
-                icon
-                    ? <a className={`project-card__button button button--with-svg ${className}`} {...props}>{icon}<span>{children}</span></a>
-                    : <a className={`project-card__button button ${className}`} {...props}>{children}</a>
+            {icon
+                ? <a className={`project-card__button button button--with-svg ${className}`} {...props}>{icon}<span>{children}</span></a>
+                : <a className={`project-card__button button ${className}`} {...props}>{children}</a>
             }
         </li>
     )
@@ -54,50 +58,40 @@ export function ProjectCardButtonList({children}: React.PropsWithChildren) {
     )
 }
 
-interface ProjectCardStackProps { technologyList: SkillData[] }
-export function ProjectCardStack({children, technologyList}: React.PropsWithChildren<ProjectCardStackProps>) {
+export function ProjectCardListItem({children}: React.PropsWithChildren) {
+    return (
+        <li className={"project-card__list-point"}>
+            {children}
+        </li>
+    )
+}
+
+export function ProjectCardStack({children}: React.PropsWithChildren) {
     return (
         <ul className={"project-card__stack-list"}>
-            {
-                technologyList.map((technology: SkillData): ReactNode => (
-                    <li className={"project-card__list-point"}>
-                        <Skill
-                            key={`project_card_technology_${technology.id}`}
-                            name={technology.name}
-                            icon={technology.icon}
-                            className={!technology.useDefaultStyle ? `project-card__skill skill--${technology.id}` : `project-card__skill`}
-                        />
-                    </li>
-                ))
-            }
-            {
-                children &&
-                <li className={"project-card__list-point"}>
-                    {children}
-                </li>
-            }
+            {children}
         </ul>
     )
 }
 
-interface ProjectCardOtherStackProps { openDelay: number, closeDelay: number, technologyList: SkillData[] }
+interface ProjectCardOtherStackProps { openDelay: number, closeDelay: number, technologyList: TechnologyVariant[] }
 export function ProjectCardOtherStack({openDelay, closeDelay, technologyList}: ProjectCardOtherStackProps) {
     return (
         <HoverCard openDelay={openDelay} closeDelay={closeDelay}>
             <HoverCardTrigger asChild={true}>
-                <button className={"button-hover-content project-card__button-hover-content"}>{`+${technologyList.length}`}</button>
+                <button className={"project-card__button-hover-content button-hover-content"}>{`+${technologyList.length}`}</button>
             </HoverCardTrigger>
             <HoverCardContent side={"top"} className={"project-card__button-hover-content-popup"}>
-                {
-                    technologyList.map((technology: SkillData): ReactNode => (
-                        <Skill
-                            icon={technology.icon}
-                            key={`project_card_technology_${technology.id}`}
-                            name={technology.name}
-                            className={!technology.useDefaultStyle ? `project-card__skill skill--${technology.id}` : `project-card__skill`}
-                        />
-                    ))
-                }
+                {technologyList.map((technology: string) => (
+                    <TechnologyTemp
+                        key={`project_other_technology_${technology}`}
+                        variant={technology as TechnologyVariant}
+                        name={technology}
+                        className={"project-card__skill"}
+                        iconHeight={SKILL_ICON_SIZE}
+                        iconWidth={SKILL_ICON_SIZE}
+                    />
+                ))}
             </HoverCardContent>
         </HoverCard>
     )

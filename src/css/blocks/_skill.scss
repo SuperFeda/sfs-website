@@ -25,6 +25,26 @@
         border-color: rgba(var(--python-rgb), 0.5);
     }
 
+    &--aiogram {
+        background-color: rgba(var(--aiogram-rgb), 0.25);
+        border-color: rgba(var(--aiogram-rgb), 0.5);
+    }
+
+    &--sqlite {
+        background-color: rgba(var(--sqlite-rgb), 0.25);
+        border-color: rgba(var(--sqlite-rgb), 0.5);
+    }
+
+    &--redis {
+        background-color: rgba(var(--redis-rgb), 0.25);
+        border-color: rgba(var(--redis-rgb), 0.5);
+    }
+
+    &--sqlalchemy {
+        background-color: rgba(var(--sqlalchemy-rgb), 0.25);
+        border-color: rgba(var(--sqlalchemy-rgb), 0.5);
+    }
+
     &--fastapi {
         background-color: rgba(var(--fastapi-rgb), 0.25);
         border-color: rgba(var(--fastapi-rgb), 0.5);

@@ -2,13 +2,14 @@ import {Layout} from "@/components/Layout.tsx";
 import {AboutSection} from "@/components/sections/AboutSection.tsx";
 import {SkillsSection} from "@/components/sections/SkillsSection.tsx";
 import {TitleWithIcon} from "@/components/TitleWithIcon.tsx";
-import {Skill} from "@/components/Skill";
 import {ServerIcon} from "@/components/icons/ServerIcon.tsx";
 import {
     H2_ICON_SIZE,
     CHAPTERS,
     H3_ICON_SIZE,
     PROJECT_TABS,
+    CURRENCY_TABS,
+    SKILL_ICON_SIZE,
 } from "@/utils/const.ts";
 import {
     services,
@@ -17,13 +18,16 @@ import {
     CICDSkills,
     projects
 } from "@/utils/portfolioDataLists.tsx"
-import type {ProjectData, ServiceData, SkillData} from "@/utils/types.ts"
+import {
+    type CurrencyType,
+    type ProjectData,
+    type ServiceData,
+    type TechnologyVariant
+} from "@/utils/types.ts"
 import {MagicBallIcon} from "@/components/icons/MagicBallIcon.tsx";
 import {type ReactNode} from "react";
 import {CodeMergeIcon} from "@/components/icons/CodeMergeIcon.tsx";
 import {DrawingCompassIcon} from "@/components/icons/DrawingCompassIcon.tsx";
-import {GitHubIcon} from "@/components/icons/GitHubIcon.tsx";
-import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
 import {ServicesSection} from "@/components/sections/ServicesSection.tsx";
 import {CodeIcon} from "@/components/icons/CodeIcon.tsx";
 import {SkillCard} from "@/components/cards/SkillCard.tsx";
@@ -36,19 +40,13 @@ import {
     ProjectCardOtherStack,
     ProjectCardStack,
     ProjectCardAnchor,
-    ProjectCardButtonList
+    ProjectCardButtonList,
+    ProjectCardListItem
 } from "@/components/cards/ProjectCard.tsx";
 import {Trans, useTranslation} from "react-i18next";
+import {LinkButtonTemp} from "@/components/LinkButtonTemp.tsx";
+import {TechnologyTemp} from "@/components/TechnologyTemp.tsx";
 
-
-const placeSkillElement = (skill: SkillData): ReactNode => (
-    <Skill
-        icon={skill.icon}
-        key={`skill_${skill.id}`}
-        name={skill.name}
-        className={!skill.useDefaultStyle ? `skills-card__skill skill--${skill.id}` : `skills-card__skill`}
-    />
-)
 
 const placeProjectCard = (project: ProjectData, i: number) => (
     <ProjectCard
@@ -58,24 +56,33 @@ const placeProjectCard = (project: ProjectData, i: number) => (
         description={project.description}
         bgImageURL={project.bgImageURL}
     >
-        <ProjectCardStack technologyList={project.baseStack}>
-            {
-                project.otherStack &&
-                <ProjectCardOtherStack
-                    openDelay={25}
-                    closeDelay={100}
-                    technologyList={project.otherStack}
-                />
+        <ProjectCardStack>
+            {project.baseStack.map((technology: string) => (
+                <ProjectCardListItem key={`project_${i}_technology_${technology}`}>
+                    <TechnologyTemp
+                        name={technology}
+                        variant={technology as TechnologyVariant}
+                        className={"project-card__skill"}
+                        iconHeight={SKILL_ICON_SIZE}
+                        iconWidth={SKILL_ICON_SIZE}
+                    />
+                </ProjectCardListItem>
+            ))}
+            {project.otherStack &&
+                <ProjectCardListItem>
+                    <ProjectCardOtherStack
+                        openDelay={25}
+                        closeDelay={100}
+                        technologyList={project.otherStack}
+                    />
+                </ProjectCardListItem>
             }
         </ProjectCardStack>
-        {
-            project.buttons &&
+        {project.buttons &&
             <ProjectCardButtonList>
-                {
-                    project.buttons.map((btn, i: number) => (
-                        <ProjectCardAnchor key={`project_card_btn_${i}`} href={btn.href} icon={btn.icon}>{btn.text}</ProjectCardAnchor>
-                    ))
-                }
+                {project.buttons.map((btn, i: number) => (
+                    <ProjectCardAnchor key={`project_card_btn_${i}`} href={btn.href} icon={btn.icon}>{btn.text}</ProjectCardAnchor>
+                ))}
             </ProjectCardButtonList>
         }
     </ProjectCard>
@@ -118,26 +125,27 @@ export function MainPage() {
                     </p>
                     <ul className={"about-section__list"}>
                         <li className={"about-section__list-point"}>
-                            <a
-                                className={"about-section__button button button--with-svg"}
+                            <LinkButtonTemp
+                                variant={"telegram"}
+                                text={t("link.about_section.telegram.text")}
+                                title={t("link.about_section.telegram.hover_text")}
                                 href={"https://t.me/fninf9"}
                                 target={"_blank"}
                                 rel={"noopener noreferrer"}
-                                title={t("link.about_section.telegram.hover_text")}
-                            >
-                                <TelegramIcon width={18} height={18} iconColor={"currentColor"} />
-                                <span>{t("link.about_section.telegram.text")}</span>
-                            </a>
+                                className={"about-section__button"}
+                                iconWidth={18}
+                                iconHeight={18}
+                            />
                         </li>
                         <li className={"about-section__list-point"}>
-                            <a
-                                className={"about-section__button button button--with-svg"}
+                            <LinkButtonTemp
+                                variant={"github"}
+                                title={t("link.about_section.telegram.hover_text")}
                                 href={"https://github.com/SuperFeda"}
-                                title={t("link.about_section.github.hover_text")}
-                            >
-                                <GitHubIcon width={18} height={18} iconColor={"currentColor"} />
-                                <span>{t("link.about_section.github.text")}</span>
-                            </a>
+                                className={"about-section__button"}
+                                iconWidth={18}
+                                iconHeight={18}
+                            />
                         </li>
                         {/*<li className={"about-section__list-point"}>*/}
                         {/*    <a*/}
@@ -166,7 +174,15 @@ export function MainPage() {
                         titleText={t("title.skillcard.backend.text")}
                         icon={<ServerIcon height={H3_ICON_SIZE} width={H3_ICON_SIZE} iconColor={"currentColor"} />}
                     >
-                        {backendSkills.map(placeSkillElement)}
+                        {backendSkills.map((skill: string) => (
+                            <TechnologyTemp
+                                name={skill}
+                                variant={skill as TechnologyVariant}
+                                className={"skills-card__skill"}
+                                iconHeight={SKILL_ICON_SIZE}
+                                iconWidth={SKILL_ICON_SIZE}
+                            />
+                        ))}
                     </SkillCard>
                     <SkillCard
                         className={"skills-section__skill-card"}
@@ -174,7 +190,15 @@ export function MainPage() {
                         titleText={t("title.skillcard.frontend.text")}
                         icon={<MagicBallIcon height={H3_ICON_SIZE} width={H3_ICON_SIZE} iconColor={"currentColor"} />}
                     >
-                        {frontendSkills.map(placeSkillElement)}
+                        {frontendSkills.map((skill: string) => (
+                            <TechnologyTemp
+                                name={skill}
+                                variant={skill as TechnologyVariant}
+                                className={"skills-card__skill"}
+                                iconHeight={SKILL_ICON_SIZE}
+                                iconWidth={SKILL_ICON_SIZE}
+                            />
+                        ))}
                     </SkillCard>
                     <SkillCard
                         className={"skills-section__skill-card"}
@@ -182,7 +206,15 @@ export function MainPage() {
                         titleText={t("title.skillcard.cicd.text")}
                         icon={<CodeMergeIcon height={H3_ICON_SIZE} width={H3_ICON_SIZE} iconColor={"currentColor"} />}
                     >
-                        {CICDSkills.map(placeSkillElement)}
+                        {CICDSkills.map((skill: string) => (
+                            <TechnologyTemp
+                                name={skill}
+                                variant={skill as TechnologyVariant}
+                                className={"skills-card__skill"}
+                                iconHeight={SKILL_ICON_SIZE}
+                                iconWidth={SKILL_ICON_SIZE}
+                            />
+                        ))}
                     </SkillCard>
                 </ul>
             </SkillsSection>
@@ -193,7 +225,7 @@ export function MainPage() {
                     titleText={t("title.projects_section.text")}
                     className={"projects-section__title title--600 title--red-icon"}
                 />
-                <Tabs defaultValue={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__tabs tabs"}>
+                <Tabs defaultValue={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__tabs"}>
                     <TabsList className={"projects-section__tabs-list"}>
                         <TabsTrigger
                             value={PROJECT_TABS.ALL_PROJECTS}
@@ -234,21 +266,19 @@ export function MainPage() {
                             ))
                         }
                     </TabsContent>
-                    {
-                        [
-                            {tabValue: PROJECT_TABS.WEBSITES, projectType: "website"},
-                            {tabValue: PROJECT_TABS.BOTS, projectType: "bot"},
-                            {tabValue: PROJECT_TABS.OTHER, projectType: "other"}
-                        ].map((v: {tabValue: string, projectType: string}) => (
-                            <TabsContent value={v.tabValue} className={"projects-section__project-list"}>
-                                {
-                                    projects.map((project: ProjectData, i: number) => (
-                                        project.type === v.projectType && placeProjectCard(project, i)
-                                    ))
-                                }
-                            </TabsContent>
-                        ))
-                    }
+                    {[
+                        {tabValue: PROJECT_TABS.WEBSITES, projectType: "website"},
+                        {tabValue: PROJECT_TABS.BOTS, projectType: "bot"},
+                        {tabValue: PROJECT_TABS.OTHER, projectType: "other"}
+                    ].map((v: {tabValue: string, projectType: string}) => (
+                        <TabsContent value={v.tabValue} className={"projects-section__project-list"}>
+                            {
+                                projects.map((project: ProjectData, i: number) => (
+                                    project.type === v.projectType && placeProjectCard(project, i)
+                                ))
+                            }
+                        </TabsContent>
+                    ))}
                 </Tabs>
             </ProjectsSection>
 
@@ -259,24 +289,61 @@ export function MainPage() {
                     className={"services-section__title title--600 title--red-icon"}
                 />
                 <p className={"services-section__description"}>{t("p.services_section.text")}</p>
-                <ul className={"services-section__list"}>
-                    {
-                        services.map((service: ServiceData, i: number): ReactNode => (
-                            <li>
-                                <ServiceCard
-                                    key={`service_card_${i}`}
-                                    className={"services-section__service-card"}
-                                    color={service.colorName}
-                                    titleText={t(service.title)}
-                                    price={service.price}
-                                    description={t(service.description)}
-                                    titleClassName={`title--${service.colorName}-icon`}
-                                    icon={service.icon}
-                                />
-                            </li>
-                        ))
-                    }
-                </ul>
+                <Tabs defaultValue={CURRENCY_TABS.rub} className={"projects-section__tabs"}>
+                    <TabsList className={"projects-section__tabs-list"}>
+                        <TabsTrigger
+                            value={CURRENCY_TABS.rub}
+                            className={"tabs__trigger--no-text-wrap"}
+                            title={t("tabs.trigger.rub.hover_text")}
+                        >
+                            {t("tabs.trigger.rub.text")}
+                        </TabsTrigger>
+
+                        <TabsTrigger
+                            value={CURRENCY_TABS.usd}
+                            className={"tabs__trigger--no-text-wrap"}
+                            title={t("tabs.trigger.usd.hover_text")}
+                        >
+                            {t("tabs.trigger.usd.text")}
+                        </TabsTrigger>
+                    </TabsList>
+                    {[CURRENCY_TABS.rub, CURRENCY_TABS.usd].map((s: string) => (
+                        <TabsContent value={s} className={"services-section__list"}>
+                            {services.map((service: ServiceData, i: number): ReactNode => (
+                                <li className={"services-section__point"}>
+                                    <ServiceCard
+                                        key={`service_card_${i}`}
+                                        className={"services-section__service-card"}
+                                        color={service.colorName}
+                                        titleText={t(service.title)}
+                                        price={service.price[s as CurrencyType]}
+                                        description={t(service.description)}
+                                        titleClassName={`title--${service.colorName}-icon`}
+                                        icon={service.icon}
+                                    />
+                                </li>
+                            ))}
+                        </TabsContent>
+                    ))}
+                </Tabs>
+                {/*<ul className={"services-section__list"}>*/}
+                {/*    {*/}
+                {/*        services.map((service: ServiceData, i: number): ReactNode => (*/}
+                {/*            <li>*/}
+                {/*                <ServiceCard*/}
+                {/*                    key={`service_card_${i}`}*/}
+                {/*                    className={"services-section__service-card"}*/}
+                {/*                    color={service.colorName}*/}
+                {/*                    titleText={t(service.title)}*/}
+                {/*                    price={service.price}*/}
+                {/*                    description={t(service.description)}*/}
+                {/*                    titleClassName={`title--${service.colorName}-icon`}*/}
+                {/*                    icon={service.icon}*/}
+                {/*                />*/}
+                {/*            </li>*/}
+                {/*        ))*/}
+                {/*    }*/}
+                {/*</ul>*/}
             </ServicesSection>
         </Layout>
     )

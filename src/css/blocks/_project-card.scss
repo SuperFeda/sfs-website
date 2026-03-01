@@ -6,12 +6,26 @@
 .project-card__content {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 
     @include backdropBlur(2px, transparent);
 
-    & > *:not(:last-child) {
-        margin-bottom: torem(10);
-    }
+    //& > *:not(:last-child) {
+    //    margin-bottom: torem(10);
+    //}
+}
+
+.project-card__top,
+.project-card__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-card__bottom {
+    margin-top: auto;
 }
 
 .project-card,
@@ -20,11 +34,11 @@
 }
 
 .project-card__title {
-    @include adaptFontSize(18, 20);
+    @include adaptFontSize(19, 21);
 }
 
 .project-card__description {
-    @include adaptFontSize(14, 16);
+    @include adaptFontSize(14, 15);
 }
 
 .project-card__stack-list {
@@ -43,14 +57,15 @@
     display: inline-flex;
     padding: toem(14, 3) toem(14, 8);
 
-    @include adaptFontSize(12, 13);
+    @include adaptFontSize(12, 14);
 }
 
 .project-card__button-hover-content {
     padding: toem(14, 3) toem(14, 9);
     border-radius: var(--border-8);
+    border: 1px solid #2d2d2d;
 
-    @include adaptFontSize(13, 14);
+    @include adaptFontSize(12, 14);
 }
 
 .project-card__button-list {
@@ -62,7 +77,7 @@
 .project-card__button {
     padding: toem(13, 3) toem(13, 10);
 
-    @include adaptFontSize(13, 14);
+    @include adaptFontSize(12, 14);
 }
 
 .project-card__button-hover-content-popup {
