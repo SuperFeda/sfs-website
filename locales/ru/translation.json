@@ -7,6 +7,15 @@
             "burger_menu": {
                 "hover_text": "Вызвать меню для навигации по странице"
             }
+        },
+        "telegram": {
+            "text": "Telegram"
+        },
+        "github": {
+            "text": "GitHub"
+        },
+        "modrinth": {
+            "text": "Modrinth"
         }
     },
     "link": {
@@ -34,11 +43,9 @@
                 "hover_text": "Ссылка на мой Telegram"
             },
             "github": {
-                "text": "GitHub",
                 "hover_text": "Ссылка на мой GitHub"
             },
             "modrinth": {
-                "text": "Modrinth",
                 "hover_text": "Ссылка на мой Modrinth"
             }
         }
@@ -83,7 +90,7 @@
             "text": "Я <0>full-stack</0> разработчик, специализируюсь на создании надёжных веб-платформ и ботов. На бэкенде использую <1>Python</1>, <2>FastAPI</2> и <3>Pydantic</3> для построения эффективных API. Фронтенд разрабатываю на <4>TypeScript</4>, <5>React</5> и Next.js, верстаю с использованием <6>SCSS</6> вместе с <7>БЭМ методологией</7>. Также создаю ботов для <8>Telegram</8> и <9>Discord</9>."
         },
         "services_section": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!"
+            "text": "Разработка под ключ: боты для Telegram/Discord, сайты на Python и React/Nextjs. Работаю по вашему ТЗ. Для фронтенда — обязательно готовый макет. Беру на себя всё: от архитектуры до деплоя на сервере и поддержки."
         }
     },
     "tabs": {
@@ -154,7 +161,7 @@
                 "text": "Telegram бот"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod."
+                "text": "Разработаю Telegram бота любой сложности. Добавлю прием платежей, модерацию или интеграцию с API. Бот будет работать быстро и надежно."
             }
         },
         "site_design": {
@@ -162,7 +169,7 @@
                 "text": "Вёрстка"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus."
+                "text": "Адаптивная и современная верстка макетов на React/Nextjs с БЭМ методологией. Сайт будет хорошо смотреться на всех устройствах."
             }
         },
         "site": {
@@ -170,7 +177,7 @@
                 "text": "Сайт \\ TG mini app"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga."
+                "text": "Разработка веб-приложений на стеке Python и React/Nextjs. Для фронтенд-части обязателен готовый макет. Реализация проектов любой сложности под ключ."
             }
         },
         "discord_bot": {
@@ -178,7 +185,7 @@
                 "text": "Discord бот"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                "text": "Разработка Discord ботов под ключ: модерация, автоматические роли и кастомные команды. Реализация логики, интеграция с внешними API и стабильная работа 24/7. Полная настройка и поддержка бота на сервере."
             }
         },
         "price": {
