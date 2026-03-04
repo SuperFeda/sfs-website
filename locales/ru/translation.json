@@ -90,7 +90,7 @@
             "text": "Я <0>full-stack</0> разработчик, специализируюсь на создании надёжных веб-платформ и ботов. На бэкенде использую <1>Python</1>, <2>FastAPI</2> и <3>Pydantic</3> для построения эффективных API. Фронтенд разрабатываю на <4>TypeScript</4>, <5>React</5> и Next.js, верстаю с использованием <6>SCSS</6> вместе с <7>БЭМ методологией</7>. Также создаю ботов для <8>Telegram</8> и <9>Discord</9>."
         },
         "services_section": {
-            "text": "Разработка под ключ: боты для Telegram/Discord, сайты на Python и React/Nextjs. Работаю по вашему ТЗ. Для фронтенда — обязательно готовый макет. Беру на себя всё: от архитектуры до деплоя на сервере и поддержки."
+            "text": "Разработаю под ключ: боты для Telegram и Discord, сайты на React/Nextjs и Python. Работаю по вашему ТЗ и Для фронтенда — обязательно готовый макет. Беру на себя всё: от архитектуры до деплоя на сервере.<0/>Cо мной можно связаться в <1>Telegram</1>."
         }
     },
     "tabs": {
@@ -113,11 +113,15 @@
             },
             "usd": {
                 "text": "USD",
-                "hover_text": "Переключить валюту на USD"
+                "hover_text": "Переключить валюту на доллар США"
             },
             "rub": {
                 "text": "RUB",
-                "hover_text": "Переключить валюту на RUB"
+                "hover_text": "Переключить валюту на российский рубль"
+            },
+            "ngn": {
+                "text": "NGN",
+                "hover_text": "Переключить валюту на нигерийскую найру"
             }
         }
     },
@@ -177,7 +181,7 @@
                 "text": "Сайт \\ TG mini app"
             },
             "description": {
-                "text": "Разработка веб-приложений на стеке Python и React/Nextjs. Для фронтенд-части обязателен готовый макет. Реализация проектов любой сложности под ключ."
+                "text": "Разработка веб-приложений на стеке Python и React/Nextjs. Реализация проектов любой сложности под ключ."
             }
         },
         "discord_bot": {
@@ -186,6 +190,22 @@
             },
             "description": {
                 "text": "Разработка Discord ботов под ключ: модерация, автоматические роли и кастомные команды. Реализация логики, интеграция с внешними API и стабильная работа 24/7. Полная настройка и поддержка бота на сервере."
+            }
+        },
+        "vk_bot": {
+            "title": {
+                "text": "Бот для ВК"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+            }
+        },
+        "max_bot": {
+            "title": {
+                "text": "Бот для MAX"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
             }
         },
         "price": {
