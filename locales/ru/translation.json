@@ -157,6 +157,26 @@
             "description": {
                 "text": "Мой сайт-портфолио."
             }
+        },
+        "badge": {
+            "library": {
+                "text": "Библиотека"
+            },
+            "vk_bot": {
+                "text": "Бот ВК"
+            },
+            "discord_bot": {
+                "text": "Discord бот"
+            },
+            "telegram_bot": {
+                "text": "Telegram бот"
+            },
+            "site_design": {
+                "text": "Вёрстка"
+            },
+            "website": {
+                "text": "Сайт"
+            }
         }
     },
     "service": {
@@ -210,7 +230,7 @@
         },
         "price": {
             "text": {
-                "right_symbol": "от {{ price }}{{ symbol }}",
+                "right_symbol": "от <0>{{ price }}{{ symbol }}</0>",
                 "left_symbol": "от {{ symbol }}{{ price }}"
             },
             "hover_text": "Цена услуги \"{{ service_name }}\" начинается от {{ price }} {{ symbol }}"
