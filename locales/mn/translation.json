@@ -1,0 +1,243 @@
+{
+    "button": {
+        "header": {
+            "change_language": {
+                "hover_text": "Хэл солих"
+            },
+            "burger_menu": {
+                "hover_text": "Хуудасны навигацийн цэсийг нээх"
+            }
+        },
+        "telegram": {
+            "text": "Telegram"
+        },
+        "github": {
+            "text": "GitHub"
+        },
+        "modrinth": {
+            "text": "Modrinth"
+        }
+    },
+    "link": {
+        "header": {
+            "about": {
+                "text": "Миний тухай",
+                "hover_text": "Миний тухай мэдээлэл"
+            },
+            "skills": {
+                "text": "Миний ур чадварууд",
+                "hover_text": "Миний ур чадварын тухай мэдээлэл"
+            },
+            "projects": {
+                "text": "Төслүүд",
+                "hover_text": "Миний төслүүдийн тухай мэдээлэл"
+            },
+            "services": {
+                "text": "Үйлчилгээнүүд",
+                "hover_text": "Үйлчилгээний тухай мэдээлэл"
+            }
+        },
+        "about_section": {
+            "telegram": {
+                "text": "Миний Telegram",
+                "hover_text": "Миний Telegram руу холбоос"
+            },
+            "github": {
+                "hover_text": "Миний GitHub руу холбоос"
+            },
+            "modrinth": {
+                "hover_text": "Миний Modrinth руу холбоос"
+            },
+            "to_my_projects": {
+                "text": "Миний төслүүд",
+                "hover_text": "Миний төслүүд рүү очих"
+            }
+        }
+    },
+    "title": {
+        "header": {
+            "text": "SυρεrFeδα",
+            "hover_text": "SuperFeda"
+        },
+        "footer": {
+            "text": "Made by SυρεrFeδα with React, SCSS und BEM."
+        },
+        "about_section": {
+            "text": "Би SuperFeda<0/><1>Full-stack</1> хөгжүүлэгч"
+        },
+        "skills_section": {
+            "text": "Миний ур чадварууд"
+        },
+        "projects_section": {
+            "text": "Миний төслүүд"
+        },
+        "service_section": {
+            "text": "Үйлчилгээнүүд"
+        },
+        "skillcard": {
+            "backend": {
+                "text": "Backend"
+            },
+            "frontend": {
+                "text": "Frontend"
+            },
+            "cicd": {
+                "text": "CI/CD, орчин"
+            }
+        }
+    },
+    "p": {
+        "footer": {
+            "text": "Зохиогчийн эрх © 2026 SuperFeda. Бүх эрх хуулиар хамгаалагдсан. Хуулбарлах, засварлахыг хориглоно."
+        },
+        "about_section": {
+            "text": "Би <0>full-stack</0> хөгжүүлэгч, найдвартай вэб платформ, ботуудыг бүтээх чиглэлээр мэргэшсэн. Бэкэндэд үр дүнтэй API байгуулахад <1>Python</1>, <2>FastAPI</2>, <3>Pydantic</3> ашигладаг. Фронтендыг <4>TypeScript</4>, <5>React</5>, Next.js дээр хөгжүүлж, <6>SCSS</6>-ийг <7>БЭМ аргачлал</7>-тай хамт ашиглан загварчладаг. Мөн <8>Telegram</8> болон <9>Discord</9>-д зориулсан ботуудыг бүтээдэг."
+        },
+        "services_section": {
+            "text": "Түлхүүр гардуулах нөхцөлөөр бүтээнэ: Telegram болон Discord ботууд, React/Nextjs болон Python дээр суурилсан сайтууд. Таны техникийн даалгавраар ажиллана. Фронтендын хувьд бэлэн загвар (макет) байх шаардлагатай. Архитектураас эхлээд сервер дээр байршуулах хүртэл бүх үйл явцыг хариуцна.<0/>Надтай <1>Telegram</1>-ээр холбогдож болно."
+        }
+    },
+    "tabs": {
+        "trigger": {
+            "all_projects": {
+                "text": "Бүх ажлууд",
+                "hover_text": "Бүх ажлуудыг харах"
+            },
+            "sites": {
+                "text": "Вэб сайтууд",
+                "hover_text": "Вэб сайттай ажлууд руу шилжих"
+            },
+            "bots": {
+                "text": "Ботууд",
+                "hover_text": "Боттой ажлууд руу шилжих"
+            },
+            "other": {
+                "text": "Бусад",
+                "hover_text": "Бусад ажлууд руу шилжих"
+            },
+            "usd": {
+                "text": "USD",
+                "hover_text": "Валютыг ам.доллар руу шилжүүлэх"
+            },
+            "rub": {
+                "text": "RUB",
+                "hover_text": "Валютыг орос рубль руу шилжүүлэх"
+            },
+            "ngn": {
+                "text": "NGN",
+                "hover_text": "Валютыг нигери найра руу шилжүүлэх"
+            }
+        }
+    },
+    "project_card": {
+        "aioheleket": {
+            "title": {
+                "text": "aioheleket"
+            },
+            "description": {
+                "text": "Heleket криптотөлбөрийн API-д зориулсан асинхрон Python номын сан."
+            }
+        },
+        "star_channel": {
+            "title": {
+                "text": "StarChannel"
+            },
+            "description": {
+                "text": "Од болон криптовалютаар ТГ сувагт түр хугацааны захиалга авах Telegram бот."
+            }
+        },
+        "skylightservices_bot": {
+            "title": {
+                "text": "SkylightServices Bot"
+            },
+            "description": {
+                "text": "Сервер дээр захиалга боловсруулах Discord бот."
+            }
+        },
+        "sfs_site": {
+            "title": {
+                "text": "SF's Site"
+            },
+            "description": {
+                "text": "Миний портфолио вэб сайт."
+            }
+        },
+        "badge": {
+            "library": {
+                "text": "Номын сан"
+            },
+            "vk_bot": {
+                "text": "ВК бот"
+            },
+            "discord_bot": {
+                "text": "Discord бот"
+            },
+            "telegram_bot": {
+                "text": "Telegram бот"
+            },
+            "site_design": {
+                "text": "Загварчлал"
+            },
+            "website": {
+                "text": "Вэб сайт"
+            }
+        }
+    },
+    "service": {
+        "telegram_bot": {
+            "title": {
+                "text": "Telegram бот"
+            },
+            "description": {
+                "text": "Ямар ч төвөгтэй Telegram ботыг бүтээнэ. Төлбөр хүлээн авах, модерация, API интеграц нэмж өгнө. Бот хурдан бөгөөд найдвартай ажиллах болно."
+            }
+        },
+        "site_design": {
+            "title": {
+                "text": "Загварчлал"
+            },
+            "description": {
+                "text": "React/Nextjs дээр БЭМ аргачлалаар дэвшилтэт, дасан зохицох загварчлал. Вэб сайт бүх төхөөрөмж дээр сайн харагдах болно."
+            }
+        },
+        "site": {
+            "title": {
+                "text": "Вэб сайт \\ TG мини апп"
+            },
+            "description": {
+                "text": "Python болон React/Nextjs технологийн стек дээр вэб аппликейшн хөгжүүлэх. Ямар ч төвөгтэй төслийг түлхүүр гардуулах нөхцөлөөр хэрэгжүүлнэ."
+            }
+        },
+        "discord_bot": {
+            "title": {
+                "text": "Discord бот"
+            },
+            "description": {
+                "text": "Discord ботыг түлхүүр гардуулах нөхцөлөөр хөгжүүлэх: модерация, автомат үүрэг (role), тусгай командууд. Логик хэрэгжүүлэх, гадаад API-тай интеграц, 24/7 тогтвортой ажиллагаа. Ботыг сервер дээр бүрэн тохируулах, дэмжих."
+            }
+        },
+        "vk_bot": {
+            "title": {
+                "text": "ВК-д зориулсан бот"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+            }
+        },
+        "max_bot": {
+            "title": {
+                "text": "MAX-д зориулсан бот"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+            }
+        },
+        "price": {
+            "text": {
+                "right_symbol": "<0>{{ price }}{{ symbol }}</0> эхлэн",
+                "left_symbol": "<0>{{ symbol }}{{ price }}</0> эхлэн"
+            },
+            "hover_text": "\"{{ service_name }}\" үйлчилгээний үнэ {{ price }} {{ symbol }}-с эхэлнэ."
+        }
+    }
+}

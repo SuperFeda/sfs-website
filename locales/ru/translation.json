@@ -47,6 +47,10 @@
             },
             "modrinth": {
                 "hover_text": "Ссылка на мой Modrinth"
+            },
+            "to_my_projects": {
+                "text": "Мои проекты",
+                "hover_text": "Перейти к моим проектам"
             }
         }
     },
@@ -231,7 +235,7 @@
         "price": {
             "text": {
                 "right_symbol": "от <0>{{ price }}{{ symbol }}</0>",
-                "left_symbol": "от {{ symbol }}{{ price }}"
+                "left_symbol": "от <0>{{ symbol }}{{ price }}</0>"
             },
             "hover_text": "Цена услуги \"{{ service_name }}\" начинается от {{ price }} {{ symbol }}"
         }
