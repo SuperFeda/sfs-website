@@ -8,6 +8,7 @@ import {TelegramIcon} from "@/components/icons/TelegramIcon.tsx";
 import {DiscordIcon} from "@/components/icons/DiscordIcon.tsx";
 import {RulerIcon} from "@/components/icons/RulerIcon.tsx";
 import {InternetIcon} from "@/components/icons/InternetIcon.tsx";
+import {VKLogoIcon} from "@/components/icons/VKLogoIcon.tsx";
 
 export const backendSkills: TechnologyVariant[] = [
     "python",
@@ -16,6 +17,7 @@ export const backendSkills: TechnologyVariant[] = [
     "aiogram",
     "disnake",
     "sqlalchemy",
+    "alembic",
     "bash",
 ]
 
@@ -53,7 +55,7 @@ export const services: ServiceData[] = [
         colorName: "telegram",
         price: {
             rub: {amount: 2500, type: "rub"},
-            usd: {amount: 55, type: "usd"},
+            usd: {amount: 40, type: "usd"},
         },
         icon: <TelegramIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "service.telegram_bot.description.text",
@@ -62,8 +64,8 @@ export const services: ServiceData[] = [
         title: "service.site_design.title.text",
         colorName: "purple",
         price: {
-            rub: {amount: 3500, type: "rub"},
-            usd: {amount: 65, type: "usd"},
+            rub: {amount: 2400, type: "rub"},
+            usd: {amount: 39, type: "usd"},
         },
         icon: <RulerIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "service.site_design.description.text",
@@ -72,8 +74,8 @@ export const services: ServiceData[] = [
         title: "service.site.title.text",
         colorName: "red",
         price: {
-            rub: {amount: 3500, type: "rub"},
-            usd: {amount: 75, type: "usd"},
+            rub: {amount: 3800, type: "rub"},
+            usd: {amount: 56, type: "usd"},
         },
         icon: <InternetIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "service.site.description.text",
@@ -83,10 +85,20 @@ export const services: ServiceData[] = [
         colorName: "discord",
         price: {
             rub: {amount: 2500, type: "rub"},
-            usd: {amount: 55, type: "usd"},
+            usd: {amount: 40, type: "usd"},
         },
         icon: <DiscordIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
         description: "service.discord_bot.description.text",
+    },
+    {
+        title: "service.vk_bot.title.text",
+        colorName: "vk",
+        price: {
+            rub: {amount: 2500, type: "rub"},
+            usd: {amount: 40, type: "usd"},
+        },
+        icon: <VKLogoIcon width={H3_ICON_SIZE} height={H3_ICON_SIZE} iconColor={DEFAULT_ICON_COLOR}/>,
+        description: "service.vk_bot.description.text",
     },
 ]
 
@@ -95,8 +107,10 @@ export const projects: ProjectData[] = [
         type: "other",
         title: "project_card.aioheleket.title.text",
         description: "project_card.aioheleket.description.text",
+        badge: "library",
         bgImageURL: "https://heleket.com/_next/image?url=%2Fimg%2Fmain-page%2Ffirst-block%2Fmain-background.webp&w=1920&q=75",
         baseStack: [
+            "python",
             "aiohttp",
             "pydantic",
         ],
@@ -115,6 +129,7 @@ export const projects: ProjectData[] = [
         type: "bot",
         title: "project_card.star_channel.title.text",
         description: "project_card.star_channel.description.text",
+        badge: "telegram_bot",
         baseStack: [
             "python",
             "aiogram",
@@ -130,6 +145,7 @@ export const projects: ProjectData[] = [
         type: "bot",
         title: "project_card.skylightservices_bot.title.text",
         description: "project_card.skylightservices_bot.description.text",
+        badge: "discord_bot",
         baseStack: [
             "python",
             "disnake",
@@ -141,6 +157,7 @@ export const projects: ProjectData[] = [
         type: "website",
         title: "project_card.sfs_site.title.text",
         description: "project_card.sfs_site.description.text",
+        badge: "website",
         bgImageURL: "./img/sfs_site.png",
         baseStack: [
             "reactjs",
@@ -193,5 +210,6 @@ export const headerLinks = [
 export const languages = [
     {name: "Русский", id: SUPPORTED_LANGUAGES.RU},
     {name: "English", id: SUPPORTED_LANGUAGES.EN},
-    {name: "Русскій языкъ", id: SUPPORTED_LANGUAGES.RU1918}
+    {name: "Монгол хэл", id: SUPPORTED_LANGUAGES.MN},
+    {name: "Русскій (дореформенный)", id: SUPPORTED_LANGUAGES.RU1918}
 ]

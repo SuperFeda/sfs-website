@@ -1,5 +1,5 @@
 import React, {type ReactNode} from "react";
-import {useTranslation} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 
 import {TitleWithIcon} from "@/components/TitleWithIcon.tsx";
 import {formatPrice} from "@/utils/utils.ts";
@@ -33,20 +33,30 @@ export function ServiceCard({className = "", price, description, icon, color, ti
                     titleText={titleText}
                 />
                 <span
-                    className={"service-card__price"}
-                    title={t("service.price.hover_text",
-                        {
+                    className={"service-card__price glass"}
+                    title={t("service.price.hover_text", {
                             price: formattedPriceAmount,
                             symbol: currency.symbol,
                             service_name: titleText
-                        })}
-                >
-                    {t(`service.price.text.${currency.currencyPos}_symbol`,
-                        {
-                            price: formattedPriceAmount,
-                            symbol: currency.symbol
                         })
                     }
+                >
+                    <Trans
+                        i18nKey={`service.price.text.${currency.currencyPos}_symbol`}
+                        values={{
+                            price: formattedPriceAmount,
+                            symbol: currency.symbol
+                        }}
+                        components={[
+                            <span className={"pale-blue-text"} />
+                        ]}
+                    />
+                    {/*{t(`service.price.text.${currency.currencyPos}_symbol`,*/}
+                    {/*    {*/}
+                    {/*        price: formattedPriceAmount,*/}
+                    {/*        symbol: currency.symbol*/}
+                    {/*    })*/}
+                    {/*}*/}
                 </span>
             </div>
             <p className={"service-card__description"}>{description}</p>

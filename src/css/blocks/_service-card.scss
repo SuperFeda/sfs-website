@@ -10,26 +10,27 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: torem(12);
+    z-index: 99;
 }
 
 .service-card__title {
     display: inline-flex;
+    z-index: 99;
 
     @include adaptFontSize(18, 20);
 }
 
 .service-card__description {
+    z-index: 99;
     @include adaptFontSize(14, 16);
 }
 
 .service-card__price {
-    display: inline-flex;
     font-weight: 600;
+    z-index: 99;
     padding: toem(17, 4) toem(17, 13);
     border-radius: var(--border-circle);
-    background-color: rgba(var(--pale-blue), 0.15);
-    color: rgb(var(--pale-blue));
-    filter: drop-shadow(0px 2px 5px #000000);
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.8));
 
     @include adaptFontSize(15, 16);
 }

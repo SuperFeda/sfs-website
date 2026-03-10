@@ -12,7 +12,8 @@ $bottom-offset: 20;
 
 .services-section__description {
     margin-bottom: torem($bottom-offset);
-    max-width: torem(750);
+    max-width: torem(770);
+    text-wrap: balance;
 
     @include adaptFontSize(14, 16);
 }
@@ -21,10 +22,6 @@ $bottom-offset: 20;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 25px;
-
-    &[data-state="inactive"] {
-        @include noDisplay();
-    }
 
     @include tablet() {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

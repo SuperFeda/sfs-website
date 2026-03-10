@@ -9,11 +9,12 @@ import {SKILL_ICON_SIZE} from "@/utils/const.ts";
 interface ProjectCardProps {
     titleText: string
     description: string
+    projectBadge: BadgeVariant
     className?: string | undefined
     bgImageURL?: string | undefined
 }
 
-export function ProjectCard({children, bgImageURL, className = "", titleText, description}: React.PropsWithChildren<ProjectCardProps>) {
+export function ProjectCard({children, projectBadge, bgImageURL, className = "", titleText, description}: React.PropsWithChildren<ProjectCardProps>) {
     const {t} = useTranslation()
 
     return (
@@ -27,7 +28,10 @@ export function ProjectCard({children, bgImageURL, className = "", titleText, de
         >
             <div className={"project-card__content"}>
                 <div className={"project-card__top"}>
-                    <h3 className={"project-card__title title"}>{t(titleText)}</h3>
+                    <div className={"project-card__head"}>
+                        <h3 className={"project-card__title title"}>{t(titleText)}</h3>
+                        <ProjectBadge variant={projectBadge} />
+                    </div>
                     <p className={"project-card__description"}>{t(description)}</p>
                 </div>
                 <div className={"project-card__bottom"}>
@@ -38,7 +42,35 @@ export function ProjectCard({children, bgImageURL, className = "", titleText, de
     )
 }
 
-interface ProjectCardAnchorProps extends AnchorHTMLAttributes<never> { icon?: ReactNode | undefined }
+const badgesData = {
+    library: { translateKey: "project_card.badge.library.text", style: "red-text" },
+    telegram_bot: { translateKey: "project_card.badge.telegram_bot.text", style: "telegram-text" },
+    discord_bot: { translateKey: "project_card.badge.discord_bot.text", style: "discord-text" },
+    vk_bot: { translateKey: "project_card.badge.vk_bot.text", style: "vk-text" },
+    site_design: { translateKey: "project_card.badge.site_design.text", style: "" },
+    website: { translateKey: "project_card.badge.website.text", style: "pale-blue-text" },
+}
+
+export type BadgeVariant = keyof typeof badgesData
+
+interface ProjectBadgeProps {
+    variant: BadgeVariant
+}
+export function ProjectBadge({variant}: ProjectBadgeProps) {
+    const badge = variant ? badgesData[variant] : null
+
+    const {t} = useTranslation()
+
+    if (badge) {
+        return (
+            <span className={`project-card__badge glass ${badge.style}`}>{t(badge.translateKey)}</span>
+        )
+    }
+}
+
+interface ProjectCardAnchorProps extends AnchorHTMLAttributes<never> {
+    icon?: ReactNode | undefined
+}
 export function ProjectCardAnchor({children, icon, className = "", ...props}: React.PropsWithChildren<ProjectCardAnchorProps>) {
     return (
         <li className={"project-card__button-list-point"}>
@@ -74,7 +106,11 @@ export function ProjectCardStack({children}: React.PropsWithChildren) {
     )
 }
 
-interface ProjectCardOtherStackProps { openDelay: number, closeDelay: number, technologyList: TechnologyVariant[] }
+interface ProjectCardOtherStackProps {
+    openDelay: number,
+    closeDelay: number,
+    technologyList: TechnologyVariant[]
+}
 export function ProjectCardOtherStack({openDelay, closeDelay, technologyList}: ProjectCardOtherStackProps) {
     return (
         <HoverCard openDelay={openDelay} closeDelay={closeDelay}>

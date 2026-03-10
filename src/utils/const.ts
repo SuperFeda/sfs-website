@@ -37,7 +37,8 @@ export const CURRENCY_TABS = {
 export const SUPPORTED_LANGUAGES = {
     RU: "ru",
     EN: "en",
-    RU1918: "ru1918"
+    RU1918: "ru1918",
+    MN: "mn"
 }
 
 export const technologyConfig = {

@@ -15,13 +15,12 @@
 }
 
 .projects-section__project-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
     gap: 20px;
 
-    &[data-state="inactive"] {
-        @include noDisplay();
+    @include tablet() {
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     }
 }
 

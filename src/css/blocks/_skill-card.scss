@@ -21,6 +21,7 @@
 
 .skills-card__skill {
     padding: toem(14, 5) toem(14, 16);
+    gap: toem(14, 6);
 
     @include adaptFontSize(13, 14);
     @include tablet() {

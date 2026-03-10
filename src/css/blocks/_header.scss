@@ -69,3 +69,18 @@
     padding: torem(20);
     width: 100%;
 }
+
+.header__dropdown-menu-content {
+    padding: torem(6);
+}
+
+.header__dropdown-menu-item {
+    gap: 0.65rem;
+    padding: toem(13, 5) toem(13, 9);
+
+    @include adaptFontSize(13, 14);
+    @include tablet() {
+        padding: toem(15, 7) toem(15, 12);
+        @include adaptFontSize(15, 16);
+    }
+}

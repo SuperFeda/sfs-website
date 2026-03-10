@@ -44,3 +44,16 @@ $offset: 2.5;
     gap: 1rem;
     justify-content: center;
 }
+
+.about-section__list-point,
+.about-section__button {
+    @include mobile-s() {
+        flex: 1 0 auto;
+        @include flexCenter(true)
+    }
+}
+#toProjectLink {
+    @include mobile-s() {
+        flex: 1 1 600px;
+    }
+}

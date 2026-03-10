@@ -7,9 +7,19 @@
         @include noDisplay();
     }
 }
-
 .visible-mobile {
     @include mobileAbove {
+        @include noDisplay();
+    }
+}
+
+.hidden-tablet {
+    @include tablet {
+        @include noDisplay();
+    }
+}
+.visible-tablet {
+    @include tabletAbove {
         @include noDisplay();
     }
 }
@@ -18,7 +28,7 @@
     max-width: var(--max-site-container-width);
     height: 100%;
     width: 100%;
-    padding: 12px;
+    padding: 12px 20px;
 
     @include marginCenter();
 }
@@ -86,6 +96,12 @@
 .skylight-blue-text {
     color: rgb(var(--skylight-blue-rgb));
 }
+.pale-blue-text {
+    color: rgb(var(--pale-blue));
+}
+.red-text {
+    color: rgb(var(--red-rgb));
+}
 .python-text {
     color: rgb(var(--python-rgb));
 }
@@ -113,6 +129,9 @@
 .discord-text {
     color: rgb(var(--discord-rgb));
 }
+.vk-text {
+    color: rgb(var(--vk-rgb));
+}
 .bem-methodology-text {
     color: rgb(var(--bem-methodology-rgb));
 }
@@ -125,7 +144,6 @@
 .sqlite-text {
     color: rgb(var(--sqlite-rgb));
 }
-
 
 .italic-style {
     font-style: italic;

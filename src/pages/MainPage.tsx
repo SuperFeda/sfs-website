@@ -46,6 +46,7 @@ import {
 import {Trans, useTranslation} from "react-i18next";
 import {LinkButtonTemp} from "@/components/LinkButtonTemp.tsx";
 import {TechnologyTemp} from "@/components/TechnologyTemp.tsx";
+import {DownArrowIcon} from "@/components/icons/DownArrowIcon.tsx";
 
 
 const placeProjectCard = (project: ProjectData, i: number) => (
@@ -55,6 +56,7 @@ const placeProjectCard = (project: ProjectData, i: number) => (
         titleText={project.title}
         description={project.description}
         bgImageURL={project.bgImageURL}
+        projectBadge={project.badge}
     >
         <ProjectCardStack>
             {project.baseStack.map((technology: string) => (
@@ -91,11 +93,13 @@ const placeProjectCard = (project: ProjectData, i: number) => (
 export function MainPage() {
     const {t} = useTranslation()
 
+    const currencies: string[] = Object.keys(CURRENCY_TABS)
+
     return (
         <Layout>
+            <div className="gridPattern"></div>
+            <div className="radialOverlay"></div>
             <AboutSection id={CHAPTERS.WHO_I_AM}>
-                <div className="gridPattern"></div>
-                <div className="radialOverlay"></div>
                 <div className={"about-section__inner"}>
                     <h1 className={"about-section__title title"}>
                         <Trans
@@ -124,6 +128,18 @@ export function MainPage() {
                         />
                     </p>
                     <ul className={"about-section__list"}>
+                        <li className={"about-section__list-point"} id={"toProjectLink"}>
+                            <a
+                                className={"about-section__button button button--with-svg"}
+                                title={t("link.about_section.to_my_projects.hover_text")}
+                                href={`#${CHAPTERS.PROJECTS}`}
+                            >
+                                <DownArrowIcon width={18} height={18} iconColor={"currentColor"} />
+                                <span>
+                                    {t("link.about_section.to_my_projects.text")}
+                                </span>
+                            </a>
+                        </li>
                         <li className={"about-section__list-point"}>
                             <LinkButtonTemp
                                 variant={"telegram"}
@@ -177,7 +193,7 @@ export function MainPage() {
                         {backendSkills.map((skill: string) => (
                             <TechnologyTemp
                                 name={skill}
-                                variant={skill as TechnologyVariant}
+                                variant={skill}
                                 className={"skills-card__skill"}
                                 iconHeight={SKILL_ICON_SIZE}
                                 iconWidth={SKILL_ICON_SIZE}
@@ -193,7 +209,7 @@ export function MainPage() {
                         {frontendSkills.map((skill: string) => (
                             <TechnologyTemp
                                 name={skill}
-                                variant={skill as TechnologyVariant}
+                                variant={skill}
                                 className={"skills-card__skill"}
                                 iconHeight={SKILL_ICON_SIZE}
                                 iconWidth={SKILL_ICON_SIZE}
@@ -209,7 +225,7 @@ export function MainPage() {
                         {CICDSkills.map((skill: string) => (
                             <TechnologyTemp
                                 name={skill}
-                                variant={skill as TechnologyVariant}
+                                variant={skill}
                                 className={"skills-card__skill"}
                                 iconHeight={SKILL_ICON_SIZE}
                                 iconWidth={SKILL_ICON_SIZE}
@@ -260,11 +276,9 @@ export function MainPage() {
                         </TabsTrigger>
                     </TabsList>
                     <TabsContent value={PROJECT_TABS.ALL_PROJECTS} className={"projects-section__project-list"}>
-                        {
-                            projects.map((project: ProjectData, i: number) => (
-                                placeProjectCard(project, i)
-                            ))
-                        }
+                        {projects.map((project: ProjectData, i: number) => (
+                            placeProjectCard(project, i)
+                        ))}
                     </TabsContent>
                     {[
                         {tabValue: PROJECT_TABS.WEBSITES, projectType: "website"},
@@ -272,11 +286,9 @@ export function MainPage() {
                         {tabValue: PROJECT_TABS.OTHER, projectType: "other"}
                     ].map((v: {tabValue: string, projectType: string}) => (
                         <TabsContent value={v.tabValue} className={"projects-section__project-list"}>
-                            {
-                                projects.map((project: ProjectData, i: number) => (
-                                    project.type === v.projectType && placeProjectCard(project, i)
-                                ))
-                            }
+                            {projects.map((project: ProjectData, i: number) => (
+                                project.type === v.projectType && placeProjectCard(project, i)
+                            ))}
                         </TabsContent>
                     ))}
                 </Tabs>
@@ -288,7 +300,15 @@ export function MainPage() {
                     titleText={t("title.service_section.text")}
                     className={"services-section__title title--600 title--red-icon"}
                 />
-                <p className={"services-section__description"}>{t("p.services_section.text")}</p>
+                <p className={"services-section__description"}>
+                    <Trans
+                        i18nKey={"p.services_section.text"}
+                        components={[
+                            <br/>,
+                            <a href={"https://t.me/fninf9"} className={"telegram-text"} />
+                        ]}
+                    />
+                </p>
                 <Tabs defaultValue={CURRENCY_TABS.rub} className={"projects-section__tabs"}>
                     <TabsList className={"projects-section__tabs-list"}>
                         <TabsTrigger
@@ -307,7 +327,7 @@ export function MainPage() {
                             {t("tabs.trigger.usd.text")}
                         </TabsTrigger>
                     </TabsList>
-                    {[CURRENCY_TABS.rub, CURRENCY_TABS.usd].map((s: string) => (
+                    {currencies.map((s: string) => (
                         <TabsContent value={s} className={"services-section__list"}>
                             {services.map((service: ServiceData, i: number): ReactNode => (
                                 <li className={"services-section__point"}>

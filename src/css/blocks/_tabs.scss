@@ -5,24 +5,25 @@
 }
 
 $list-border-radius: 15;
-$list-padding: 4;
+$list-padding: 3;
 $trigger-border-radius: $list-border-radius - $list-padding;
 
 .tabs__list {
     display: flex;
     flex-direction: row;
+    gap: torem(2);
     background-color: #141414;
     max-width: max-content;
     width: auto;
     overflow-x: auto;
     border: 1px solid #202020;
-    //padding: toem(16, $list-padding);
     border-radius: var(--border-15);
+    padding: toem(15, $list-padding);
 }
 
 .tabs__trigger {
     padding: toem(15, 5) toem(15, 18);
-    border-radius: 0;
+    border-radius: torem($trigger-border-radius);
     transition: background-color var(--transition-time);
 
     @include adaptFontSize(14, 16);
@@ -40,5 +41,15 @@ $trigger-border-radius: $list-border-radius - $list-padding;
 
     &[data-state=active] {
         background-color: #2d2d2d;
+    }
+}
+
+.tabs__content {
+    flex: 1 1 0%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+
+    &[hidden] {
+        @include noDisplay();
     }
 }

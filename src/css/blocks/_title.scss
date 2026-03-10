@@ -60,6 +60,10 @@
     &--discord-icon svg {
         @include iconColor(rgb(var(--discord-rgb)), rgba(var(--discord-rgb), 0.15))
     }
+
+    &--vk-icon svg {
+        @include iconColor(rgb(var(--vk-rgb)), rgba(var(--vk-rgb), 0.15))
+    }
 }
 
 

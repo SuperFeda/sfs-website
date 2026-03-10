@@ -2,13 +2,15 @@ import {BurgerMenuIcon} from "@/components/icons/BurgerMenuIcon.tsx";
 import {LanguageIcon} from "@/components/icons/LanguageIcon.tsx";
 import {useBurgerMenuStore} from "@/stores/useBurgerMenuStore.ts";
 import {headerLinks, languages} from "@/utils/portfolioDataLists.tsx";
-import {useTranslation} from "react-i18next";
 import {
     DropdownMenu,
     DropdownMenuItem,
     DropdownMenuContent,
     DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu.tsx";
+
+import {useTranslation} from "react-i18next";
+
 
 export function Header() {
     const toggleMenu = useBurgerMenuStore(state => state.toggleMenu);
@@ -24,18 +26,16 @@ export function Header() {
                     {t("title.header.text")}
                 </h1>
                 <div className={"header__right-panel header__glass glass"}>
-                    <nav className={"header__navbar hidden-mobile"}>
+                    <nav className={"header__navbar hidden-tablet"}>
                         <ul className={"header__link-list"}>
-                            {
-                                headerLinks.map((linkData, i: number) => (
-                                    <li className={"header__list-point"} key={`header_link_${i}`}>
-                                        <a className={"header__link-btn"} href={linkData.link} title={t(linkData.title)}>
-                                            {linkData.icon}
-                                            <span>{t(linkData.text)}</span>
-                                        </a>
-                                    </li>
-                                ))
-                            }
+                            {headerLinks.map((linkData, i: number) => (
+                                <li className={"header__list-point"} key={`header_link_${i}`}>
+                                    <a className={"header__link-btn"} href={linkData.link} title={t(linkData.title)}>
+                                        {linkData.icon}
+                                        <span>{t(linkData.text)}</span>
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                     <ul className={"header__button-list"}>
@@ -49,20 +49,19 @@ export function Header() {
                                         <LanguageIcon height={18} width={18} iconColor={"currentColor"} />
                                     </button>
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent side={"bottom"}>
-                                    {
-                                        languages.map((lang) => (
-                                            <DropdownMenuItem
-                                                onClick={() => i18n.changeLanguage(lang.id)}
-                                            >
-                                                {lang.name}
-                                            </DropdownMenuItem>
-                                        ))
-                                    }
+                                <DropdownMenuContent side={"bottom"} className={"header__dropdown-menu-content"}>
+                                    {languages.map((lang) => (
+                                        <DropdownMenuItem
+                                            className={"header__dropdown-menu-item"}
+                                            onClick={() => i18n.changeLanguage(lang.id)}
+                                        >
+                                            {lang.name}
+                                        </DropdownMenuItem>
+                                    ))}
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         </li>
-                        <li className={"visible-mobile"}>
+                        <li className={"visible-tablet"}>
                             <button
                                 className={"header__button button"}
                                 title={t("button.header.burger_menu.hover_text")}

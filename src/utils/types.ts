@@ -1,5 +1,7 @@
 import type {ReactNode} from "react";
+
 import type {technologyConfig} from "@/utils/const.ts";
+import type {BadgeVariant} from "@/components/cards/ProjectCard.tsx";
 
 export type TechnologyVariant = keyof typeof technologyConfig | string;
 
@@ -8,7 +10,7 @@ export type ServiceData = {
     icon: ReactNode
     price: {
         rub: Price,
-        usd: Price
+        usd: Price,
     }
     colorName: string
     description: string
@@ -34,6 +36,7 @@ export type ProjectData = {
     type: "other" | "website" | "bot"
     title: string
     description: string
+    badge: BadgeVariant
     baseStack: TechnologyVariant[]
     bgImageURL?: string
     otherStack?: TechnologyVariant[] | undefined,
