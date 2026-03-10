@@ -7,6 +7,15 @@
             "burger_menu": {
                 "hover_text": "Open page navigation menu"
             }
+        },
+        "telegram": {
+            "text": "Telegram"
+        },
+        "github": {
+            "text": "GitHub"
+        },
+        "modrinth": {
+            "text": "Modrinth"
         }
     },
     "link": {
@@ -34,12 +43,14 @@
                 "hover_text": "Link to my Telegram"
             },
             "github": {
-                "text": "GitHub",
                 "hover_text": "Link to my GitHub"
             },
             "modrinth": {
-                "text": "Modrinth",
                 "hover_text": "Link to my Modrinth"
+            },
+            "to_my_projects": {
+                "text": "My projects",
+                "hover_text": "Go to my projects"
             }
         }
     },
@@ -49,10 +60,10 @@
             "hover_text": "SuperFeda"
         },
         "footer": {
-            "text": "Made by SuperFeda with React, SCSS and BEM."
+            "text": "Made by SυρεrFeδα with React, SCSS and BEM."
         },
         "about_section": {
-            "text": "I'm SuperFeda<0/><1>full-stack</1> developer"
+            "text": "I'm SuperFeda<0/><1>Full-stack</1> developer"
         },
         "skills_section": {
             "text": "My skills"
@@ -80,10 +91,10 @@
             "text": "Copyright © 2026 SuperFeda. All rights reserved. Copying and editing is not allowed."
         },
         "about_section": {
-            "text": "I am a <0>full-stack</0> developer, specializing in creating reliable web platforms and bots. On the backend, I use <1>Python</1>, <2>FastAPI</2>, and <3>Pydantic</3> to build efficient APIs. I develop the frontend with <4>TypeScript</4>, <5>React</5>, and Next.js, styling with <6>SCSS</6> and the <7>BEM methodology</7>. I also create bots for <8>Telegram</8> and <9>Discord</9>."
+            "text": "I'm a <0>full-stack</0> developer, specializing in creating reliable web platforms and bots. On the backend, I use <1>Python</1>, <2>FastAPI</2> and <3>Pydantic</3> to build efficient APIs. I develop the frontend with <4>TypeScript</4>, <5>React</5> and Next.js, styling using <6>SCSS</6> together with <7>BEM methodology</7>. I also create bots for <8>Telegram</8> and <9>Discord</9>."
         },
         "services_section": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!"
+            "text": "I will develop turnkey: bots for Telegram and Discord, websites on React/Nextjs and Python. I work according to your terms of reference. For the frontend — a ready-made layout is required. I take care of everything: from architecture to deployment on the server.<0/>You can contact me on <1>Telegram</1>."
         }
     },
     "tabs": {
@@ -94,11 +105,11 @@
             },
             "sites": {
                 "text": "Websites",
-                "hover_text": "Switch to website projects"
+                "hover_text": "Switch to websites"
             },
             "bots": {
                 "text": "Bots",
-                "hover_text": "Switch to bot projects"
+                "hover_text": "Switch to bots"
             },
             "other": {
                 "text": "Other",
@@ -106,11 +117,15 @@
             },
             "usd": {
                 "text": "USD",
-                "hover_text": "Switch to USD currency"
+                "hover_text": "Switch currency to US Dollar"
             },
             "rub": {
                 "text": "RUB",
-                "hover_text": "Switch to RUB currency"
+                "hover_text": "Switch currency to Russian Ruble"
+            },
+            "ngn": {
+                "text": "NGN",
+                "hover_text": "Switch currency to Nigerian Naira"
             }
         }
     },
@@ -120,7 +135,7 @@
                 "text": "aioheleket"
             },
             "description": {
-                "text": "Asynchronous Python library for the Heleket crypto payment API."
+                "text": "Asynchronous Python library for the Heleket crypto payments API."
             }
         },
         "star_channel": {
@@ -128,7 +143,7 @@
                 "text": "StarChannel"
             },
             "description": {
-                "text": "Telegram bot for purchasing temporary subscriptions to Telegram channels using stars and cryptocurrency."
+                "text": "Telegram bot for purchasing temporary subscription to a TG channel for stars and cryptocurrency."
             }
         },
         "skylightservices_bot": {
@@ -146,6 +161,26 @@
             "description": {
                 "text": "My portfolio website."
             }
+        },
+        "badge": {
+            "library": {
+                "text": "Library"
+            },
+            "vk_bot": {
+                "text": "VK bot"
+            },
+            "discord_bot": {
+                "text": "Discord bot"
+            },
+            "telegram_bot": {
+                "text": "Telegram bot"
+            },
+            "site_design": {
+                "text": "Layout"
+            },
+            "website": {
+                "text": "Website"
+            }
         }
     },
     "service": {
@@ -154,23 +189,23 @@
                 "text": "Telegram bot"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod."
+                "text": "I will develop a Telegram bot of any complexity. I will add payment acceptance, moderation, or API integration. The bot will work quickly and reliably."
             }
         },
         "site_design": {
             "title": {
-                "text": "Layout / HTML/CSS"
+                "text": "Layout"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus."
+                "text": "Responsive and modern layout of mockups on React/Nextjs with BEM methodology. The site will look good on all devices."
             }
         },
         "site": {
             "title": {
-                "text": "Website \\ TG mini app"
+                "text": "Website / TG mini app"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga."
+                "text": "Development of web applications using Python and React/Nextjs stack. Implementation of projects of any complexity turnkey."
             }
         },
         "discord_bot": {
@@ -178,13 +213,29 @@
                 "text": "Discord bot"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                "text": "Turnkey Discord bot development: moderation, automatic roles, and custom commands. Implementation of logic, integration with external APIs, and stable 24/7 operation. Full setup and support of the bot on the server."
+            }
+        },
+        "vk_bot": {
+            "title": {
+                "text": "VK bot"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+            }
+        },
+        "max_bot": {
+            "title": {
+                "text": "MAX bot"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
             }
         },
         "price": {
             "text": {
-                "right_symbol": "from {{ price }}{{ symbol }}",
-                "left_symbol": "from {{ symbol }}{{ price }}"
+                "right_symbol": "from <0>{{ price }}{{ symbol }}</0>",
+                "left_symbol": "from <0>{{ symbol }}{{ price }}</0>"
             },
             "hover_text": "Price of the service \"{{ service_name }}\" starts from {{ price }} {{ symbol }}"
         }

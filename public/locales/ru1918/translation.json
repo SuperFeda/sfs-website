@@ -2,30 +2,39 @@
     "button": {
         "header": {
             "change_language": {
-                "hover_text": "Переключить языкъ"
+                "hover_text": "Перемѣнить языкъ"
             },
             "burger_menu": {
-                "hover_text": "Вызвать меню для навигаціи по страницѣ"
+                "hover_text": "Вызвать списокъ для путеводства по страницѣ"
             }
+        },
+        "telegram": {
+            "text": "Telegram"
+        },
+        "github": {
+            "text": "GitHub"
+        },
+        "modrinth": {
+            "text": "Modrinth"
         }
     },
     "link": {
         "header": {
             "about": {
                 "text": "Обо мнѣ",
-                "hover_text": "Информація обо мнѣ"
+                "hover_text": "Свѣдѣнія обо мнѣ"
             },
             "skills": {
                 "text": "Мои умѣнія",
-                "hover_text": "Информація о моихъ умѣніяхъ"
+                "hover_text": "Свѣдѣнія о моихъ умѣніяхъ"
             },
             "projects": {
-                "text": "Мои труды",
-                "hover_text": "Информація о моихъ трудахъ"
+                "text": "Мои работы",
+                "hover_text": "Свѣдѣнія о моихъ работахъ"
             },
             "services": {
-                "text": "Услуги",
-                "hover_text": "Информація объ услугахъ"
+                "text": "Послуги",
+                "hover_text": "Свѣдѣнія о послугахъ"
             }
         },
         "about_section": {
@@ -34,12 +43,14 @@
                 "hover_text": "Ссылка на мой Telegram"
             },
             "github": {
-                "text": "GitHub",
                 "hover_text": "Ссылка на мой GitHub"
             },
             "modrinth": {
-                "text": "Modrinth",
                 "hover_text": "Ссылка на мой Modrinth"
+            },
+            "to_my_projects": {
+                "text": "Мои работы",
+                "hover_text": "Перейти къ моимъ работамъ"
             }
         }
     },
@@ -49,7 +60,7 @@
             "hover_text": "SuperFeda"
         },
         "footer": {
-            "text": "Made by SυρεrFeδα with React, SCSS und BEM."
+            "text": "Сотворено SυρεrFeδα съ помощію React, SCSS и BEM."
         },
         "about_section": {
             "text": "Im SuperFeda<0/><1>Full-stack</1> разработчикъ"
@@ -58,10 +69,10 @@
             "text": "Мои умѣнія"
         },
         "projects_section": {
-            "text": "Мои труды"
+            "text": "Мои работы"
         },
         "service_section": {
-            "text": "Услуги"
+            "text": "Послуги"
         },
         "skillcard": {
             "backend": {
@@ -71,19 +82,19 @@
                 "text": "Frontend"
             },
             "cicd": {
-                "text": "CI/CD, окруженіе"
+                "text": "CI/CD, среда"
             }
         }
     },
     "p": {
         "footer": {
-            "text": "Copyright © 2026 SuperFeda. Всѣ права защищены. Копированіе и редактированіе возбраняется."
+            "text": "Copyright © 2026 SuperFeda. Всѣ права защищены. Копированіе и редактированіе не допускается."
         },
         "about_section": {
-            "text": "Я <0>full-stack</0> разработчикъ, занимаюсь созданіемъ надежныхъ веб-платформъ и ботовъ. На бэкендѣ употребляю <1>Python</1>, <2>FastAPI</2> и <3>Pydantic</3> для созданія дѣйственныхъ API. Фронтендъ разрабатываю на <4>TypeScript</4>, <5>React</5> и Next.js, верстаю съ использованіемъ <6>SCSS</6> вмѣстѣ съ <7>БЭМ методологіей</7>. Также творю ботовъ для <8>Telegram</8> и <9>Discord</9>."
+            "text": "Я <0>full-stack</0> разработчикъ, спеціализируюсь на созданіи надёжныхъ веб-платформъ и ботовъ. На бэкендѣ использую <1>Python</1>, <2>FastAPI</2> и <3>Pydantic</3> для построенія эффективныхъ API. Фронтендъ разрабатываю на <4>TypeScript</4>, <5>React</5> и Next.js, верстаю съ использованіемъ <6>SCSS</6> вмѣстѣ съ <7>БЭМ методологіей</7>. Также создаю ботовъ для <8>Telegram</8> и <9>Discord</9>."
         },
         "services_section": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus. A doloremque earum neque!"
+            "text": "Разработаю подъ ключъ: боты для Telegram и Discord, сайты на React/Nextjs и Python. Работаю по вашему ТЗ и для фронтенда — обязательно готовый макетъ. Беру на себя все: отъ архитектуры до деплоя на серверѣ.<0/>Со мной можно связаться въ <1>Telegram</1>."
         }
     },
     "tabs": {
@@ -102,15 +113,19 @@
             },
             "other": {
                 "text": "Другіе",
-                "hover_text": "Переключить на остальныя работы"
+                "hover_text": "Переключить на прочія работы"
             },
             "usd": {
                 "text": "USD",
-                "hover_text": "Переключить валюту на USD"
+                "hover_text": "Переключить валюту на долларъ США"
             },
             "rub": {
                 "text": "RUB",
-                "hover_text": "Переключить валюту на RUB"
+                "hover_text": "Переключить валюту на россійскій рубль"
+            },
+            "ngn": {
+                "text": "NGN",
+                "hover_text": "Переключить валюту на нигерійскую найру"
             }
         }
     },
@@ -128,7 +143,7 @@
                 "text": "StarChannel"
             },
             "description": {
-                "text": "Telegram ботъ для покупки временной подписки в ТГ каналъ за звѣзды и криптовалюту."
+                "text": "Telegram ботъ для покупки временной подписки въ ТГ каналъ за звѣзды и криптовалюту."
             }
         },
         "skylightservices_bot": {
@@ -146,6 +161,26 @@
             "description": {
                 "text": "Мой сайтъ-портфоліо."
             }
+        },
+        "badge": {
+            "library": {
+                "text": "Библіотека"
+            },
+            "vk_bot": {
+                "text": "Ботъ ВК"
+            },
+            "discord_bot": {
+                "text": "Discord ботъ"
+            },
+            "telegram_bot": {
+                "text": "Telegram ботъ"
+            },
+            "site_design": {
+                "text": "Верстка"
+            },
+            "website": {
+                "text": "Сайтъ"
+            }
         }
     },
     "service": {
@@ -154,7 +189,7 @@
                 "text": "Telegram ботъ"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod."
+                "text": "Разработаю Telegram бота любой сложности. Добавлю пріемъ платежей, модерацію или интеграцію съ API. Ботъ будетъ работать быстро и надежно."
             }
         },
         "site_design": {
@@ -162,7 +197,7 @@
                 "text": "Верстка"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga, libero maxime porro quod, sit temporibus veniam voluptatibus."
+                "text": "Адаптивная и современная верстка макетовъ на React/Nextjs съ БЭМ методологіей. Сайтъ будетъ хорошо смотрѣться на всѣхъ устройствахъ."
             }
         },
         "site": {
@@ -170,7 +205,7 @@
                 "text": "Сайтъ \\ TG mini app"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur debitis delectus dolorem dolorum ea eum excepturi fuga."
+                "text": "Разработка веб-приложений на стекѣ Python и React/Nextjs. Реализація работъ любой сложности подъ ключъ."
             }
         },
         "discord_bot": {
@@ -178,15 +213,31 @@
                 "text": "Discord ботъ"
             },
             "description": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                "text": "Разработка Discord ботовъ подъ ключъ: модерація, автоматическіе роли и кастомные команды. Реализація логики, интеграція съ внѣшними API и стабильная работа 24/7. Полная настройка и поддержка бота на серверѣ."
+            }
+        },
+        "vk_bot": {
+            "title": {
+                "text": "Ботъ для ВК"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+            }
+        },
+        "max_bot": {
+            "title": {
+                "text": "Ботъ для MAX"
+            },
+            "description": {
+                "text": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
             }
         },
         "price": {
             "text": {
-                "right_symbol": "от {{ price }}{{ symbol }}",
-                "left_symbol": "от {{ symbol }}{{ price }}"
+                "right_symbol": "отъ <0>{{ price }}{{ symbol }}</0>",
+                "left_symbol": "отъ <0>{{ symbol }}{{ price }}</0>"
             },
-            "hover_text": "Цѣна услуги \"{{ service_name }}\" начинается от {{ price }} {{ symbol }}"
+            "hover_text": "Цѣна послуги \"{{ service_name }}\" начинается отъ {{ price }} {{ symbol }}"
         }
     }
 }
